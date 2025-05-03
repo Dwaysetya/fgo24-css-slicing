@@ -27,6 +27,7 @@ nav {
 .navbar .dropdown{
    width: 24px;
    height: 24px; 
+   margin-top:15px ;
    align-self: center;
 }
 
@@ -238,24 +239,17 @@ input {
   align-items: center;
 }
 .people img{
-  width: 48px; 
-  height: 48px;
+  width: 248px; 
+  height: 70px;
 }
 .name {
-  width: 261px;
+  width: 435px;
   height: 70px;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 .telp {
-  width: 310px;
-  height: 70px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.price {
   width: 243px;
   height: 70px;
   display: flex;
@@ -269,41 +263,9 @@ input {
   justify-content: center;
   align-items: center;
 }
-.pagination {
-  list-style: none;
-  display: flex;
-  gap: 8px;
-  padding: 0;
-}
 
-.pagination li a {
-  display: block;
-  padding: 5px 5px;
-  text-decoration: none;
-  color: #333;
-  border-radius: 4px;
-  font-weight: 500;
-  color: #0b132a;
-  font-size: 12px;
-  line-height: 18px;
-}
-.pagination span{
-   margin-top: 5px;
-  font-weight: 500;
-   color: #0b132a;
-    font-size: 12px;
-    line-height: 18px;
-}
-.dropdown1 {
-  position: relative;
-  display: inline-block;
-}
 
-.dropdown1 img.dropdown {
-  width: 24px;
-  height: 24px;
-  cursor: pointer;
-  margin-top: 15px;
-}
+
+
 
 
