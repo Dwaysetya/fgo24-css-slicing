@@ -1,0 +1,231 @@
+@import url("https://fonts.googleapis.com/css2?family=Bellefair&family=Montserrat&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Rancho&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bellefair&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Rancho&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  font-family: "montserrat";
+}
+nav {
+  width: 100%;
+  height: 76px;
+  background-color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #e8e8e8;
+}
+.frame-13 {
+  width: 129px;
+  height: 32px;
+  margin-left: 50px;
+  display: flex;
+  justify-content: flex-start;
+  font-family: "Nunito Sans";
+  flex-direction: row;
+  gap: 15px;
+}
+.navbar {
+  width: 423px;
+  height: 48px;
+  margin-right: 50px;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  gap: 22px;
+}
+.frame-13 img {
+  width: 32px;
+  height: 32px;
+}
+.frame-13 p {
+  align-self: center;
+  color: #2948ff;
+}
+.teks-16 {
+  font-family: "montserrat";
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  color: #4f5665;
+}
+.section-container {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: row;
+}
+.navigation {
+  width: 20%;
+  height: 948px;
+  background-color: white;
+  border-right: 1px solid #e8e8e8;
+  padding: 44px 50px;
+}
+.content-navigation {
+  width: 208px;
+  height: 350px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.item-navigation {
+  width: 208px;
+  height: 45px;
+  border-radius: 6px;
+  background-color: white;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 8px;
+  padding: 4px 2px 4px 8px;
+  text-decoration: none;
+}
+.item-navigation:hover {
+  background-color: #2948ff;
+  color: white;
+}
+.content {
+  width: 80%;
+  height: 948px;
+  background-color: white;
+}
+.content-item {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+  margin-top: 60px;
+}
+.item-one {
+  width: 1061px;
+  height: 28px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 20px;
+}
+.item-two {
+  width: 1061px;
+  height: 720px;
+  border: 1px solid #e8e8e8;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+}
+.two-find-1 {
+  width: 926px;
+  height: 70px;
+  background-color: #e8e8e84d;
+  gap: 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.two-find-11 {
+  width: 926px;
+  height: 70px;
+  border-bottom: 1px solid #e8e8e84d;
+  gap: 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.two-find-2 {
+  width: 926px;
+  height: 40px;
+  gap: 10px;
+  margin: 15px 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.teks-14 {
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 20px;
+}
+input {
+  width: 340px;
+  border: none;
+  outline: none;
+}
+.search-container {
+  width: 340px;
+  height: 40px;
+  border-radius: 6px;
+  border: 1px solid #e8e8e8;
+  padding: 10px;
+  background-color: white;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.people {
+  width: 112px;
+  height: 70px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.name {
+  width: 261px;
+  height: 70px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.telp {
+  width: 310px;
+  height: 70px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.price {
+  width: 243px;
+  height: 70px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.trash {
+  width: 77px;
+  height: 70px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.pagination {
+  list-style: none;
+  display: flex;
+  gap: 8px;
+  padding: 0;
+}
+
+.pagination li a {
+  display: block;
+  padding: 5px 5px;
+  text-decoration: none;
+  color: #333;
+  border-radius: 4px;
+  font-weight: 500;
+  color: #0b132a;
+  font-size: 12px;
+  line-height: 18px;
+}
+
+.pagination li a:hover {
+  background-color: #f0f0f0;
+  color: #2948ff;
+}

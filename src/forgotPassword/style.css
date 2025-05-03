@@ -1,0 +1,97 @@
+@import url("https://fonts.googleapis.com/css2?family=Bellefair&family=Montserrat&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Rancho&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bellefair&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Rancho&display=swap");
+
+body {
+  margin: 0;
+}
+section {
+  width: 1440px;
+  height: 1024px;
+  background-color: #2948ff;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}
+section .frame-36 {
+  background-color: white;
+  width: 550px;
+  height: 466px;
+  border-radius: 20px;
+  align-self: center;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}
+.frame-34 {
+  width: 451px;
+  height: 323px;
+  align-self: center;
+  background-color: white;
+}
+.frame-12 {
+  display: flex;
+  justify-content: flex-start;
+  font-family: "Nunito Sans";
+  flex-direction: row;
+  gap: 15px;
+  width: 100%;
+  height: 32px;
+}
+.frame-12 img {
+  width: 32px;
+  height: 32px;
+}
+.frame-12 p {
+  align-self: center;
+  color: #2948ff;
+}
+.frame-36 .teks-30 {
+  font-size: 30px;
+  font-family: "Montserrat";
+  color: #0b132a;
+}
+.frame-36 .teks-16 {
+  font-family: "Montserrat";
+  font-size: 16px;
+  color: #4f5665;
+}
+.kejadian {
+  width: 100%;
+  height: 77px;
+}
+.teks-16-kejadian {
+  font-family: "Montserrat";
+  font-size: 16px;
+  font-weight: 500px;
+}
+.frame-1 {
+  width: 100%;
+  height: 44px;
+  border-radius: 8px;
+  border: 1px solid black;
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 10px;
+}
+.frame-1 img {
+  width: 16px;
+  height: 16px;
+  align-self: center;
+  padding-left: 14px;
+}
+.frame-1 input {
+  width: 80%;
+  border: none;
+}
+button {
+  width: 100%;
+  height: 50px;
+  border-radius: 6px;
+  border: none;
+  margin: 5px 0;
+  background-color: #2948ff;
+  color: white;
+}
+button:hover {
+  background-color: #02147c;
+}
