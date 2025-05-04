@@ -48,6 +48,7 @@ nav {
   flex-direction: row;
   justify-content: flex-end;
   gap: 22px;
+  margin-right: 2%;
 }
 .frame-13 img {
   width: 32px;
@@ -144,17 +145,15 @@ nav {
   list-style: none;
   margin: 0;
   padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 
 .menu > li {
   position: relative;
   margin-right: 1.5rem;
-}
-
-.menu a {
-  color: white;
-  text-decoration: none;
 }
 
 .dropdown-menu {
@@ -196,6 +195,7 @@ nav {
   display: flex;
   flex-direction: row;
   gap: 10px;
+  text-decoration: none;
 }
 .teks-14{
   font-size: 14px;
@@ -234,8 +234,9 @@ nav {
   align-items: center;
 }
 .frame-35 .teks-30 {
-  font-size: 30px;
+  font-size: 16px;
   font-family: "Montserrat";
+  font-weight: 600;
   margin: 0;
   color: #0b132a;
 }
