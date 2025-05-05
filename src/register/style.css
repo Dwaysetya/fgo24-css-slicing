@@ -117,7 +117,7 @@ section .frame {
   height: 44px;
   border-radius: 8px;
   border: 1px solid black;
-  background-color: #FCFDFE;
+  background-color: #fcfdfe;
   display: flex;
   flex-direction: row;
   margin-bottom: 10px;
@@ -131,7 +131,7 @@ section .frame {
 .frame-1 input {
   width: 80%;
   border: none;
-  background-color: #FCFDFE;
+  background-color: #fcfdfe;
   font-weight: 400;
 }
 .frame-1 .eyeslash {
@@ -195,9 +195,9 @@ section .content-two {
     display: flex;
     justify-content: center;
   }
-   .content-one{
+  .content-one {
     padding-left: 10px;
-   }
+  }
   .frame > img {
     max-width: 375px;
     width: 100%;
@@ -208,16 +208,13 @@ section .content-two {
   .frame .teks-16 {
     font-size: 12px;
   }
-  .frame-12 p{
+  .frame-12 p {
     font-size: 20px;
   }
-  .frame-12{
-  }
-  .frame-29 .teks-18{
+  .frame-29 .teks-18 {
     display: none;
   }
-  .frame-1 .eyeslash{
+  .frame-1 .eyeslash {
     padding-right: 10px;
   }
-
 }
