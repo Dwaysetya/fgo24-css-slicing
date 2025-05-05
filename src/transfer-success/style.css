@@ -229,6 +229,7 @@ input {
   width: 340px;
   border: none;
   outline: none;
+  font-size: 12px;
 }
 .people {
   width: 233px;
@@ -292,6 +293,8 @@ input {
 }
 .nominal > input{
   width: 100%;
+  font-size: 12px;
+  font-weight: 400;
 }
 .notes{
   width: 994px;
