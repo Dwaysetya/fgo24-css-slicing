@@ -86,7 +86,6 @@ section .frame {
   background-color: #2948ff;
 }
 .frame-29 img {
-
   max-width: 24px;
   width: 100%;
   height: 24px;
@@ -118,6 +117,7 @@ section .frame {
   height: 44px;
   border-radius: 8px;
   border: 1px solid black;
+  background-color: #FCFDFE;
   display: flex;
   flex-direction: row;
   margin-bottom: 10px;
@@ -131,6 +131,8 @@ section .frame {
 .frame-1 input {
   width: 80%;
   border: none;
+  background-color: #FCFDFE;
+  font-weight: 400;
 }
 .frame-1 .eyeslash {
   margin-left: 0;
@@ -161,13 +163,12 @@ section .content-two {
   height: auto;
 }
 
-@media screen and (max-width: 768px ) {
-  section .content-two{
+@media screen and (max-width: 768px) {
+  section .content-two {
     display: none;
   }
-  section .content-one{
+  section .content-one {
     width: 100%;
-    height: 642px;
     height: auto;
     background-color: white;
     border-top-right-radius: 0;
@@ -180,32 +181,43 @@ section .content-two {
     align-items: center;
     gap: 10px;
   }
-  
-}
-@media screen and (max-width: 375px ) {
-  section{
-    width: 100%;
+  .media {
     display: flex;
-    justify-content: center;
-  }
-  section .content-one{
-    max-width: 375px;
-    width: 100%;
-     height: auto;
-    background-color: white;
-    border-top-right-radius: 0;
-    border-bottom-right-radius: 0;
-    padding-top: 10px;
-    padding-right: 10px;
-    padding-bottom: 10px;
-    display: flex;
+    flex-direction: row;
     justify-content: center;
     align-items: center;
     gap: 10px;
   }
-  .frame > img{
+}
+@media screen and (max-width: 335px) {
+  section {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+   .content-one{
+    padding-left: 10px;
+   }
+  .frame > img {
     max-width: 375px;
     width: 100%;
   }
-  
+  .frame .teks-30 {
+    font-size: 18px;
+  }
+  .frame .teks-16 {
+    font-size: 12px;
+  }
+  .frame-12 p{
+    font-size: 20px;
+  }
+  .frame-12{
+  }
+  .frame-29 .teks-18{
+    display: none;
+  }
+  .frame-1 .eyeslash{
+    padding-right: 10px;
+  }
+
 }
