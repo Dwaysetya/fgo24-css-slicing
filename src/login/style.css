@@ -128,16 +128,20 @@ section .frame {
 .frame-1 .eyeslash {
   margin-left: 0;
 }
-button {
+.link{
+  display: inline-block;
   width: 100%;
+  line-height: 50px;
   height: 50px;
   border-radius: 6px;
   border: none;
+  text-align: center;
   margin: 5px 0;
   background-color: #2948ff;
   color: white;
+  text-decoration: none;
 }
-button:hover {
+.link:hover {
   background-color: #02147c;
 }
 section .content-two {

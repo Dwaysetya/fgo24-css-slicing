@@ -5,7 +5,8 @@ body {
   margin: 0;
 }
 section {
-  width: 1440px;
+  max-width: 1440px;
+  width: 100%;
   height: 1024px;
   background-color: #2948ff;
   display: flex;
@@ -13,7 +14,8 @@ section {
 }
 
 section .content-one {
-  width: 710px;
+  max-width: 710px;
+  width: 100%;
   height: auto;
   background-color: white;
   border-top-right-radius: 40px;
@@ -27,7 +29,8 @@ section .content-one {
   gap: 10px;
 }
 section .frame {
-  width: 562px;
+  max-width: 562px;
+  width: 100%;
   height: 772px;
   background-color: white;
 }
@@ -41,7 +44,8 @@ section .frame {
   height: 32px;
 }
 .frame-12 img {
-  width: 32px;
+  max-width: 32px;
+  width: 100%;
   height: 32px;
 }
 .frame-12 p {
@@ -59,7 +63,8 @@ section .frame {
   color: #4f5665;
 }
 .frame-32 {
-  width: 562px;
+  max-width: 562px;
+  width: 100%;
   height: 51px;
   display: flex;
   flex-wrap: wrap;
@@ -81,7 +86,9 @@ section .frame {
   background-color: #2948ff;
 }
 .frame-29 img {
-  width: 24px;
+
+  max-width: 24px;
+  width: 100%;
   height: 24px;
   align-self: center;
 }
@@ -141,7 +148,8 @@ button:hover {
   background-color: #02147c;
 }
 section .content-two {
-  width: 710px;
+  max-width: 710px;
+  width: 100%;
   height: 1024px;
   background-color: #2948ff;
   display: flex;
@@ -151,4 +159,53 @@ section .content-two {
 .content-two img {
   max-width: 100%;
   height: auto;
+}
+
+@media screen and (max-width: 768px ) {
+  section .content-two{
+    display: none;
+  }
+  section .content-one{
+    width: 100%;
+    height: 642px;
+    height: auto;
+    background-color: white;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    padding-top: 10px;
+    padding-right: 10px;
+    padding-bottom: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+  }
+  
+}
+@media screen and (max-width: 375px ) {
+  section{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+  section .content-one{
+    max-width: 375px;
+    width: 100%;
+     height: auto;
+    background-color: white;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    padding-top: 10px;
+    padding-right: 10px;
+    padding-bottom: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+  }
+  .frame > img{
+    max-width: 375px;
+    width: 100%;
+  }
+  
 }
