@@ -3,9 +3,11 @@
 
 body {
   margin: 0;
+  font-family: "montserrat";
 }
 section {
-  width: 1440px;
+  max-width: 1440px;
+  width: 100%;
   height: 1024px;
   background-color: #2948ff;
   display: flex;
@@ -13,7 +15,8 @@ section {
 }
 
 section .content-one {
-  width: 710px;
+  max-width: 710px;
+  width: 100%;
   height: auto;
   background-color: white;
   border-top-right-radius: 40px;
@@ -27,7 +30,8 @@ section .content-one {
   gap: 10px;
 }
 section .frame {
-  width: 562px;
+  max-width: 562px;
+  width: 100%;
   height: 772px;
   background-color: white;
 }
@@ -36,12 +40,13 @@ section .frame {
   justify-content: flex-start;
   font-family: "Nunito Sans";
   flex-direction: row;
-  gap: 15px;
+  gap: 20px;
   width: 100%;
   height: 32px;
 }
 .frame-12 img {
-  width: 32px;
+  max-width: 32px;
+  width: 100%;
   height: 32px;
 }
 .frame-12 p {
@@ -50,16 +55,16 @@ section .frame {
 }
 .frame .teks-30 {
   font-size: 30px;
-  font-family: "Montserrat";
   color: #0b132a;
 }
-.frame .teks-16 {
-  font-family: "Montserrat";
+.teks-16 {
   font-size: 16px;
+  font-weight: 500;
   color: #4f5665;
 }
 .frame-32 {
-  width: 562px;
+  max-width: 562px;
+  width: 100%;
   height: 51px;
   display: flex;
   flex-wrap: wrap;
@@ -86,7 +91,6 @@ section .frame {
   align-self: center;
 }
 .frame-29 .teks-18 {
-  font-family: "Montserrat";
   line-height: 100%;
   font-size: 18px;
   color: #4f5665;
@@ -99,10 +103,9 @@ section .frame {
 }
 .kejadian {
   width: 100%;
-  height: 77px;
+  height: 80px;
 }
 .teks-16-kejadian {
-  font-family: "Montserrat";
   font-size: 16px;
   font-weight: 500px;
 }
@@ -113,7 +116,7 @@ section .frame {
   border: 1px solid black;
   display: flex;
   flex-direction: row;
-  margin-bottom: 10px;
+  margin: 10px 0;
 }
 .frame-1 img {
   width: 16px;
@@ -124,11 +127,16 @@ section .frame {
 .frame-1 input {
   width: 80%;
   border: none;
+  font-size: 12px;
+  font-weight: 400;
+  color: #4f5665;
+  outline: none;
+  padding: 10px;
 }
 .frame-1 .eyeslash {
   margin-left: 0;
 }
-.link{
+.link {
   display: inline-block;
   width: 100%;
   line-height: 50px;
@@ -136,7 +144,7 @@ section .frame {
   border-radius: 6px;
   border: none;
   text-align: center;
-  margin: 5px 0;
+  margin-top: 18%;
   background-color: #2948ff;
   color: white;
   text-decoration: none;
@@ -145,7 +153,8 @@ section .frame {
   background-color: #02147c;
 }
 section .content-two {
-  width: 710px;
+  max-width: 710px;
+  width: 100%;
   height: 1024px;
   background-color: #2948ff;
   display: flex;
@@ -156,6 +165,73 @@ section .content-two {
   max-width: 100%;
   height: auto;
 }
-@media screen {
-  
+@media screen and (max-width: 768px) {
+  section {
+    max-width: 768px;
+    width: 100%;
+    margin: 0;
+    padding: 5%;
+    background-color: white;
+  }
+  section .content-one {
+    max-width: 768px;
+    width: 100%;
+    border-radius: 0;
+  }
+  section .content-two {
+    max-width: 0;
+    width: 0;
+    height: 0;
+  }
+  section .content-two img {
+    display: none;
+    width: 0%;
+  }
+  section .frame {
+    margin: 0 10%;
+  }
+   .frame > img {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 355px) {
+  section {
+    max-width: 355px;
+    width: 100%;
+    margin: 0;
+  }
+  section .content-one {
+    max-width: 355px;
+    width: 100%;
+    border-radius: 0;
+    padding: 0;
+    margin: 0;
+  }
+  section .content-two img {
+    display: none;
+    width: 0%;
+  }
+  .frame > img {
+    max-width: 355px;
+    width: 100%;
+  }
+  section .frame {
+    /* margin: 0 5%; */
+    justify-content: center;
+    align-items: center;
+  }
+  .link{
+    margin-top: 35%;
+  }
+  .eyeslash{
+    padding-right: 10px;
+  }
+  .media{
+    display: flex;
+    flex-direction: row-reverse;
+    gap: 20px;
+  }
+  .frame-29 >p{
+    display: none;
+  }
 }

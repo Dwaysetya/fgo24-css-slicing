@@ -133,6 +133,8 @@ section .frame {
   border: none;
   background-color: #fcfdfe;
   font-weight: 400;
+  outline: none;
+  padding: 10px;
 }
 .frame-1 .eyeslash {
   margin-left: 0;
@@ -189,7 +191,7 @@ section .content-two {
     gap: 10px;
   }
 }
-@media screen and (max-width: 335px) {
+@media screen and (max-width: 355px) {
   section {
     width: 100%;
     display: flex;
