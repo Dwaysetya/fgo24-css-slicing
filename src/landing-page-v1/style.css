@@ -6,6 +6,7 @@
 }
 body {
   margin: 0;
+  font-family: "montserrat";
 }
 nav {
   width: 100%;
@@ -49,8 +50,22 @@ nav {
   border-radius: 5px;
   border: 1px solid white;
   color: white;
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-button:hover {
+.dropdown-master {
+  display: none;
+  width: 40px;
+  height: 40px;
+  background-color: #2948ff;
+  border-radius: 5px;
+  border: 1px solid white;
+  color: white;
+}
+
+.button-header:hover {
   background-color: white;
   color: #2948ff;
 }
@@ -83,14 +98,12 @@ section {
   height: 453px;
 }
 .teks-48 {
-  font-family: "montserrat";
   font-size: 48px;
   font-weight: 500px;
   line-height: 100%;
   margin: 0;
 }
 .teks-16 {
-  font-family: "montserrat";
   font-size: 16px;
   font-weight: 400;
   line-height: 100%;
@@ -182,7 +195,6 @@ section {
   height: 109px;
 }
 .teks-36 {
-  font-family: "montserrat";
   font-size: 36px;
   font-weight: 500;
   line-height: 100%;
@@ -216,7 +228,6 @@ section {
   align-items: center;
 }
 .teks-18 {
-  font-family: "montserrat";
   font-size: 18px;
   font-weight: 700;
   line-height: 100%;
@@ -307,7 +318,8 @@ section {
   align-items: end;
 }
 .frame-56-item {
-  width: 1180px;
+  max-width: 1180px;
+  width: 100%;
   height: 104px;
   align-self: center;
   display: flex;
@@ -329,7 +341,8 @@ section {
   gap: 30px;
 }
 .frame-61 {
-  width: 303px;
+  max-width: 303px;
+  width: 100%;
   height: 380px;
   background-color: #e8e8e84d;
   border-radius: 8px;
@@ -371,7 +384,6 @@ section {
 }
 .teks-carousel {
   font-size: 48px;
-  font-family: "montserrat";
   font-weight: 700;
   margin: 0;
 }
@@ -397,14 +409,14 @@ footer {
   align-items: center;
 }
 .content-item {
-  width: 276px;
+  max-width: 276px;
+  width: 100%;
   height: 151px;
   display: flex;
   flex-direction: column;
   gap: 7px;
 }
 .teks-18-footer {
-  font-family: "montserrat";
   font-size: 18px;
   font-weight: 600;
   letter-spacing: 1px;
@@ -419,20 +431,22 @@ footer {
   flex-direction: row;
   margin-bottom: 10px;
   background-color: white;
+  padding: 10px;
 }
 .frame-1 img {
-  width: 16pxx;
+  width: 16px;
   height: 16px;
   align-self: center;
-  padding-left: 14px;
   margin: 2px;
 }
 .frame-1 input {
   width: 80%;
   border: none;
+  outline: none;
 }
 .frame-14-item {
-  width: 275px;
+  width: 100%;
+  max-width: 275px;
   height: 36px;
   border-radius: 6px;
   background-color: white;
@@ -455,11 +469,61 @@ footer {
   font-size: 14px;
   font-weight: 400;
   line-height: 22px;
-  font-family: "montserrat";
   color: white;
 }
+.custom {
+  background-color: #2948ff;
+  width: 86%;
+}
+@media screen and (max-width: 1200px) {
+  body {
+    width: 100%;
+  }
+  .frame-37 {
+    max-width: 1180px;
+    width: 100%;
+    height: 653px;
+    margin-left: 5%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .frame-38 {
+    width: 100%;
+  }
+  .footer {
+    max-width: 1200px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .footer-content {
+    max-width: 1200px;
+    padding: 5%;
+    gap: 10px;
+  }
+  .content-item {
+    width: 40%;
+    gap: 2%;
+  }
+  .frame-carousel {
+    gap: 5px;
+  }
+  .frame-51 {
+    gap: 0;
+  }
+}
+@media screen and (max-width: 1030px) {
+  .footer-content {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 1030;
+    width: 100%;
+  }
+}
 
-@media (max-width: 760px) {
+@media (max-width: 768px) {
   .frame-38 {
     display: flex;
     flex-direction: column-reverse;
@@ -470,5 +534,307 @@ footer {
     display: flex;
     flex-direction: column;
     height: auto;
+  }
+  .frame-aboute {
+    display: flex;
+    margin-top: 40%;
+    height: 100%;
+    flex-direction: column;
+  }
+  .frame-aboute1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .teks-16 {
+    text-align: center;
+    padding-right: 0;
+  }
+  .teks-48 {
+    text-align: center;
+  }
+  .frame-72 {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+    align-items: center;
+  }
+  .frame-37 {
+    margin-left: 0;
+    padding: 10%;
+  }
+  .frame-wave {
+    margin-top: 60%;
+    background-position: left 55% bottom 45%;
+    background-size: cover;
+    justify-content: start;
+    height: 100%;
+  }
+  .wave-content {
+    width: 768px;
+    display: flex;
+    height: 150%;
+    align-items: center;
+    flex-direction: column;
+    gap: 0;
+  }
+  .wave2 {
+    width: 768px;
+    height: 768px;
+    padding: 10%;
+  }
+  .frame-14-wave {
+    width: 100%;
+  }
+  .frame-aboute2 {
+    width: 60%;
+  }
+  .frame-56-item {
+    padding: 10%;
+  }
+  .frame-carousel {
+    flex-direction: column;
+  }
+  .frame-61 {
+    max-width: 768px;
+    width: 50%;
+  }
+  .frame-61-panah,
+  .frame-61-panah-right {
+    display: none;
+  }
+  .carousel-1 {
+    display: none;
+  }
+  footer {
+    width: 100%;
+    height: 100vh;
+    background-color: #2948ff;
+  }
+  .footer-content {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    justify-content: center;
+    gap: 40px;
+    align-items: center;
+  }
+  .content-item {
+    width: 60%;
+    max-width: 768px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .copyright {
+    background-color: #2948ff;
+    margin: 0;
+  }
+  hr {
+    border: 1px solid white;
+    color: #2948ff;
+    background-color: #2948ff;
+  }
+}
+@media screen and (max-width: 375px) {
+  nav {
+    width: 100%;
+    height: 74px;
+    padding: 20px;
+    background-color: #2948ff;
+  }
+  .frame-13 {
+    margin-left: 0;
+  }
+  .online-payment {
+    width: 375px;
+    height: 255px;
+  }
+  .online-payment img {
+    width: 334px;
+    height: 251px;
+  }
+  .header {
+    margin-right: 0;
+  }
+  .frame-37 {
+    width: 330px;
+    height: 424px;
+    padding: 0;
+  }
+  .teks-16 {
+    text-align: center;
+  }
+  .teks-48 {
+    font-size: 32px;
+    font-weight: 500;
+    text-align: left;
+  }
+  .frame-56-item .teks-48 {
+    text-align: center;
+  }
+  .frame-72 {
+    height: 0;
+  }
+  .frame-aboute1 {
+    width: 335px;
+    height: 163px;
+    margin-top: 60px;
+  }
+  .teks-36 {
+    text-align: center;
+    font-size: 32px;
+  }
+  .frame-aboute2 {
+    width: 335px;
+    height: 256px;
+  }
+  .frame-52 {
+    width: 300px;
+    height: 180px;
+    gap: 10px;
+    justify-content: center;
+  }
+  .wave-content {
+    width: 375px;
+  }
+  .wave2 {
+    width: 375px;
+  }
+  .frame-57 {
+    width: 335px;
+    height: 87px;
+  }
+  .item1-57 .teks-16 {
+    text-align: left;
+  }
+  .frame-56 {
+    height: 100px;
+    margin-top: 61px;
+  }
+  .frame-56-item {
+    width: 335px;
+    height: 163px;
+    padding: 0;
+  }
+  .frame-carousel {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30%;
+  }
+  .frame-61 {
+    width: 303px;
+    height: 380px;
+  }
+  .content-item {
+    width: 335px;
+    height: 120px;
+    justify-content: left;
+    align-items: start;
+  }
+  .content-item img {
+    align-self: flex-start;
+  }
+  .teks-17 {
+    text-align: left;
+  }
+  footer {
+    margin-top: 25%;
+  }
+  .teks-18-footer {
+    margin: 20px 0;
+  }
+  .footer-content {
+    gap: 30px;
+  }
+  .copyright {
+    width: 100%;
+  }
+  .frame-1 {
+    width: 335px;
+  }
+  .frame-1 input {
+    width: 100%;
+  }
+  .frame-14-item {
+    max-width: 335px;
+    width: 100%;
+  }
+  .button-header {
+    display: none;
+  }
+  .dropdown-master {
+    display: block;
+    position: relative;
+    margin-left: 90%;
+    margin-top: 5%;
+    border: none;
+  }
+
+  .dropdown-toggle {
+    background: none;
+    border: none;
+    cursor: pointer;
+  }
+  .dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    width: 200px;
+    border-radius: 5px;
+    padding: 0;
+    margin-right: 450%;
+    list-style: none;
+    z-index: 999;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .dropdown-menu li {
+    width: 340px;
+    height: 100px;
+    background-color: white;
+    display: flex;
+    margin-left: 10%;
+    justify-content: center;
+    align-items: center;
+    padding-left: 16px;
+    gap: 0;
+   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+
+  }
+  .dropdown-menu > li:last-child {
+    border-bottom-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+  }
+
+  .dropdown-menu li a {
+    color: #2948ff;
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 335px;
+    height: 50px;
+    margin-right: 5%;
+    border-radius: 5px;
+    background-color: white;
+  }
+  .dropdown-menu li a:hover{
+    background-color: #2948ff;
+    color: white;
+  }
+
+  .dropdown-master:hover .dropdown-menu {
+    display: block;
   }
 }
