@@ -5,7 +5,7 @@
 }
 body {
   margin: 0;
-  font-family: "montserrat";
+  font-family: "Montserrat", sans-serif;
 }
 nav {
   width: 100%;
@@ -59,7 +59,6 @@ nav {
   color: #2948ff;
 }
 .teks-16 {
-  font-family: "montserrat";
   font-size: 16px;
   font-weight: 400;
   line-height: 24px;
@@ -235,13 +234,11 @@ nav {
 }
 .frame-35 .teks-30 {
   font-size: 16px;
-  font-family: "Montserrat";
   font-weight: 600;
   margin: 0;
   color: #0b132a;
 }
 .frame-35 .teks-16 {
-  font-family: "Montserrat";
   font-size: 16px;
   font-weight: 400;
   color: #4f5665;

@@ -1,8 +1,8 @@
-@import url("https://fonts.googleapis.com/css2?family=Bellefair&family=Montserrat&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Rancho&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Bellefair&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Rancho&display=swap");
 
 body {
   margin: 0;
+  font-family: "Montserrat", sans-serif;
 }
 section {
   max-width: 1440px;
