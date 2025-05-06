@@ -5,7 +5,8 @@ body {
   margin: 0;
 }
 section {
-  width: 1440px;
+  max-width: 1440px;
+  width: 100%;
   height: 1024px;
   background-color: #2948ff;
   display: flex;
@@ -13,7 +14,8 @@ section {
 }
 
 section .content-one {
-  width: 710px;
+  width: 100%;
+  max-width: 710px;
   height: auto;
   background-color: white;
   border-top-right-radius: 40px;
@@ -27,7 +29,8 @@ section .content-one {
   gap: 10px;
 }
 section .frame-35 {
-  width: 562px;
+  width: 100%;
+  max-width: 562px;
   height: 422px;
   background-color: white;
 }
@@ -73,7 +76,8 @@ section .frame-35 {
 }
 
 .pin-box {
-  width: 60px;
+  width: 100%;
+  max-width: 60px;
   height: 50px;
   text-align: center;
   font-size: 24px;
@@ -99,7 +103,8 @@ button:hover {
   background-color: #02147c;
 }
 section .content-two {
-  width: 710px;
+  width: 100%;
+  max-width: 710px;
   height: 1024px;
   background-color: #2948ff;
   display: flex;
@@ -107,4 +112,64 @@ section .content-two {
 .content-two img {
   width: 700px;
   height: auto;
+}
+@media screen and (max-width: 1293px) {
+  section {
+    max-width: 1293px;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+  }
+  section .frame-35 {
+    width: 100%;
+    max-width: 562px;
+    height: 422px;
+    margin: 7%;
+  }
+  section .content-one {
+    border-radius: 20px;
+    max-width: 1293px;
+    height: auto;
+    width: 80%;
+  }
+  section .content-two {
+    max-width: 0;
+    width: 0;
+    display: none;
+  }
+}
+@media screen and (max-width: 768px) {
+  section .content-one {
+    border-radius: 20px;
+    max-width: 768px;
+    height: auto;
+    width: 80%;
+  }
+  .teks-16 {
+    font-size: 12px;
+    font-weight: 400;
+  }
+  section .frame-35 {
+    height: auto;
+  }
+  .frame-35 .teks-30 {
+    font-size: 18px;
+    font-weight: 500;
+  }
+  .frame-12 p {
+    font-size: 20px;
+    font-weight: 600;
+  }
+}
+@media screen and (max-width: 355px) {
+  section .frame-35 {
+    max-width: 355px;
+    width: 100%;
+    max-height: 480;
+    height: 100%;
+  }
+  .pin-inputs{
+    gap: 5px;
+    margin: 0;
+  }
 }
