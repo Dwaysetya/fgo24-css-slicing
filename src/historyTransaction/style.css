@@ -148,6 +148,16 @@ nav {
   justify-content: space-between;
   align-items: center;
 }
+.two-find-21 {
+  width: 926px;
+  height: 40px;
+  gap: 10px;
+  margin: 15px 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
 .teks-14 {
   font-size: 14px;
   font-weight: 500;
@@ -222,8 +232,190 @@ input {
   font-size: 12px;
   line-height: 18px;
 }
+.transfer {
+  display: none;
+}
+.phone {
+  display: flex;
+}
 
 .pagination li a:hover {
   background-color: #f0f0f0;
   color: #2948ff;
+}
+@media screen and (max-width: 375px) {
+  nav {
+    display: none;
+  }
+  header {
+    margin: 0;
+  }
+  .section-container {
+    position: sticky;
+  }
+  .frame-content {
+    display: none;
+  }
+  .item-two {
+    width: 375px;
+    border: none;
+    margin-bottom: 20%;
+    gap: 10px;
+  }
+
+  .item-one {
+    width: 375px;
+  }
+  .item-one img,
+  .item-one span {
+    display: none;
+  }
+  .content-item {
+    margin-top: 12px;
+    gap: 0;
+  }
+  .transfer {
+    display: flex;
+    width: 375px;
+    height: 54px;
+    background-color: #2948ff;
+    padding: 15px 24px;
+    align-items: center;
+    position: fixed;
+  }
+  .transfer h1 {
+    color: white;
+    font-size: 14px;
+    font-weight: 500;
+  }
+  .find-people .teks-16 {
+    font-size: 14px;
+    font-weight: 500;
+  }
+  .navigation {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 375px;
+    height: 74px;
+    border-right: none;
+    border-top: 1px solid #e8e8e8;
+    padding: 10px 20px;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    z-index: 1000;
+    box-shadow: 0px -2px 5px #00000014;
+  }
+  .content-navigation {
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    width: 75px;
+    height: 60px;
+  }
+  .content-navigation .teks-16 {
+    font-size: 10px;
+  }
+
+  .item-navigation {
+    padding: 4px 8px;
+    border-radius: 6px;
+    font-size: 14px;
+    flex-direction: column;
+    gap: 0;
+    width: 75px;
+    height: 60px;
+  }
+  .icon-dashboard1 {
+    fill: #4f5665;
+    display: block;
+  }
+  .item-navigation:hover {
+    background-color: white;
+  }
+  .content {
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+  .content1,
+  .content1-2 {
+    width: 375px;
+  }
+  .content1-2 {
+    position: relative;
+  }
+  .content1-3 {
+    width: 100%;
+    height: auto;
+  }
+  .icon-dashboard {
+    color: #2948ff;
+  }
+  .item-navigation p {
+    color: #2948ff;
+  }
+  .item1 .teks-16 {
+    font-size: 10px;
+  }
+  .teks-24 {
+    font-size: 12px;
+  }
+  .teks-16 {
+    font-size: 14px;
+  }
+  .two-find-1,
+  .two-find-11 {
+    width: 375px;
+    padding: 20px;
+  }
+  .price {
+    width: 118px;
+  }
+  .two-find-2 {
+    width: 375px;
+    height: 64px;
+    flex-direction: column;
+    align-items: start;
+    padding: 0 20px;
+    margin: 0 0 10% 0;
+    gap: 0;
+  }
+  .two-find-21{
+    display: none;
+  }
+  .phone {
+    flex-direction: column;
+    gap: 10px;
+    width: 217px;
+    height: 40px;
+    align-items: start;
+    justify-content: start;
+    display: flex;
+  }
+  .trash {
+    display: none;
+  }
+  .trash img {
+    width: 16px;
+    height: 16px;
+  }
+  .name,
+  .telp {
+    justify-content: start;
+    width: 200px;
+    height: 10px;
+  }
+  .search-container {
+    width: 335px;
+  }
+  .find-people .teks-12 {
+    display: none;
+  }
+  .people {
+    display: none;
+  }
 }
