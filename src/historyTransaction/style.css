@@ -243,6 +243,9 @@ input {
   background-color: #f0f0f0;
   color: #2948ff;
 }
+.modal {
+  display: none;
+}
 @media screen and (max-width: 375px) {
   nav {
     display: none;
@@ -384,7 +387,7 @@ input {
     margin: 0 0 10% 0;
     gap: 0;
   }
-  .two-find-21{
+  .two-find-21 {
     display: none;
   }
   .phone {
@@ -417,5 +420,99 @@ input {
   }
   .people {
     display: none;
+  }
+  .content {
+    position: relative;
+  }
+  .modal {
+    width: 375px;
+    height: 640px;
+    background-color: #00000099;
+    position: fixed;
+    margin-bottom: 27%;
+    z-index: 999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .background {
+    width: 330px;
+    height: 473px;
+    background-color: white;
+    border-radius: 16px;
+    margin-bottom: 30%;
+  }
+  .modal-content {
+    display: flex;
+    flex-direction: column;
+    width: 330px;
+    height: 290px;
+    padding: 20px;
+    gap: 15px;
+  }
+  .DT-galuh {
+    width: 290px;
+    height: 25px;
+  }
+  .modal-galuh {
+    width: 290px;
+  }
+  .modal-galuh p {
+    font-size: 12px;
+    font-weight: 500;
+    border-bottom: 1px solid #e8e8e8;
+    display: flex;
+    padding: 5px 0;
+  }
+  .modal-image {
+    width: 80px;
+    height: 80px;
+    border-radius: 4px;
+  }
+  .modal-name,
+  .modal-phone,
+  .modal-status,
+  .modal-mount {
+    width: 290px;
+    height: 40px;
+    display: flex;
+    flex-direction: column;
+  }
+  .modal-judul,
+  .modal-item {
+    margin: 0;
+  }
+  .modal-judul {
+    font-size: 14px;
+    font-weight: 600;
+  }
+  .modal-item {
+    font-size: 14px;
+    font-weight: 400;
+  }
+  .modal-mount > p:last-child {
+    color: #d00000;
+  }
+  .modal-button button {
+    width: 290px;
+    height: 35px;
+    background-color: #2948ff;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    border-radius: 6px;
+    border: none;
+  }
+  .modal-button:hover {
+    width: 290px;
+    height: 35px;
+  }
+  button:hover {
+    background-color: white;
+    color: red;
+     border: 1px solid red;
+    border-radius: 6px;
   }
 }
