@@ -20,7 +20,7 @@ form.addEventListener("submit", function (e) {
   } else {
     message.textContent = "Register Berhasil";
     message.classList.add("success");
-    window.location.href = "/src/createPin/index.html";
+    window.location.href = "/src/enterpin/index.html";
   }
 
   const dataUser = {

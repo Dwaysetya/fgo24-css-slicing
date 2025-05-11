@@ -1,0 +1,52 @@
+[
+  {
+    "photo": "https://randomuser.me/api/portraits/men/11.jpg",
+    "name": "Budi Santoso",
+    "phone": "0812-3456-7890"
+  },
+  {
+    "photo": "https://randomuser.me/api/portraits/women/22.jpg",
+    "name": "Siti Rahmawati",
+    "phone": "0821-9876-5432"
+  },
+  {
+    "photo": "https://randomuser.me/api/portraits/men/33.jpg",
+    "name": "Andi Pratama",
+    "phone": "0857-1234-5678"
+  },
+  {
+    "photo": "https://randomuser.me/api/portraits/women/44.jpg",
+    "name": "Dewi Lestari",
+    "phone": "0813-8765-4321"
+  },
+  {
+    "photo": "https://randomuser.me/api/portraits/men/55.jpg",
+    "name": "Rizky Hidayat",
+    "phone": "0899-5555-7777"
+  },
+  {
+    "photo": "https://randomuser.me/api/portraits/men/66.jpg",
+    "name": "Agus Saputra",
+    "phone": "0822-3344-5566"
+  },
+  {
+    "photo": "https://randomuser.me/api/portraits/women/77.jpg",
+    "name": "Intan Permata",
+    "phone": "0819-1122-3344"
+  },
+  {
+    "photo": "https://randomuser.me/api/portraits/men/88.jpg",
+    "name": "Fajar Nugroho",
+    "phone": "0856-7788-9900"
+  },
+  {
+    "photo": "https://randomuser.me/api/portraits/women/99.jpg",
+    "name": "Mega Ayu",
+    "phone": "0831-5566-7788"
+  },
+  {
+    "photo": "https://randomuser.me/api/portraits/men/9.jpg",
+    "name": "Dimas Wicaksono",
+    "phone": "0817-6677-8899"
+  }
+]
