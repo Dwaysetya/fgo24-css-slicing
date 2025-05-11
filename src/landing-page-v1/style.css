@@ -350,7 +350,6 @@ section {
   justify-content: center;
   align-items: center;
   gap: 10px;
-  display: flex;
 }
 .frame-61-panah {
   width: 47px;
@@ -517,7 +516,7 @@ footer {
   .footer-content {
     display: flex;
     flex-wrap: wrap;
-    max-width: 1030;
+    max-width: 1030px;
     width: 100%;
   }
 }
@@ -712,7 +711,7 @@ footer {
   /* .dropdown-master:hover .dropdown-menu {
     display: block;
   } */
-   .show{
+   .dropdown-menu.active{
     display: block;
   }
 }
