@@ -12,6 +12,16 @@ section {
   display: flex;
   flex-direction: row;
 }
+.message {
+  font-size: 12px;
+}
+
+.success{
+  color: green;
+}
+.error{
+  color: red;
+}
 
 section .content-one {
   max-width: 710px;
@@ -116,12 +126,12 @@ section .frame {
   display: flex;
   flex-direction: row;
   margin: 10px 0;
+  padding: 0 10px;
 }
 .frame-1 img {
   width: 16px;
   height: 16px;
   align-self: center;
-  padding-left: 14px;
 }
 .frame-1 input {
   width: 80%;
@@ -143,7 +153,7 @@ section .frame {
   border-radius: 6px;
   border: none;
   text-align: center;
-  margin-top: 18%;
+  margin-top: 5%;
   background-color: #2948ff;
   color: white;
   text-decoration: none;
@@ -220,7 +230,7 @@ section .content-two {
     align-items: center;
   }
   .link{
-    margin-top: 35%;
+    margin-top: 5%;
   }
   .eyeslash{
     padding-right: 10px;

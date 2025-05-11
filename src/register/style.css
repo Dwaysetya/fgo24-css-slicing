@@ -7,11 +7,21 @@ body {
 section {
   max-width: 1440px;
   width: 100%;
-  height: 1024px;
+  height: auto;
   background-color: #2948ff;
   display: flex;
   flex-direction: row;
 }
+.message{
+  font-size: 12px;
+}
+.success{
+  color: green;
+}
+.error{
+  color: red;
+}
+
 
 section .content-one {
   max-width: 710px;
@@ -31,8 +41,10 @@ section .content-one {
 section .frame {
   max-width: 562px;
   width: 100%;
-  height: 772px;
   background-color: white;
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 60px;
 }
 .frame-12 {
   display: flex;
@@ -102,11 +114,21 @@ section .frame {
 }
 .kejadian {
   width: 100%;
-  height: 77px;
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+  gap: 10px;
 }
+
 .teks-16-kejadian {
   font-size: 16px;
   font-weight: 500px;
+}
+.container-input {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 }
 .frame-1 {
   width: 100%;
@@ -135,13 +157,13 @@ section .frame {
 .frame-1 .eyeslash {
   margin-left: 0;
 }
-button {
+button.register-button {
   width: 100%;
   height: 50px;
   border-radius: 6px;
   border: none;
-  margin: 5px 0;
   background-color: #2948ff;
+  position: static;
   color: white;
 }
 button:hover {
@@ -150,7 +172,7 @@ button:hover {
 section .content-two {
   max-width: 710px;
   width: 100%;
-  height: 1024px;
+   height: 100vh;
   background-color: #2948ff;
   display: flex;
   justify-content: center;
@@ -158,7 +180,6 @@ section .content-two {
 }
 .content-two img {
   max-width: 100%;
-  height: auto;
 }
 
 @media screen and (max-width: 768px) {
@@ -187,7 +208,7 @@ section .content-two {
     gap: 10px;
   }
 }
-@media screen and (max-width: 355px) {
+@media screen and (max-width: 768px) {
   section {
     width: 100%;
     display: flex;

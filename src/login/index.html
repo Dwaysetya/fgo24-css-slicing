@@ -43,43 +43,51 @@
             src="/asset/images/Or web.png"
             alt="Or"
           />
-          <form class="kejadian">
-            <label class="teks-16-kejadian">Email</label>
-            <div class="frame-1">
-              <img src="/asset/images/mail.png" alt="mail" />
-              <input
-                type="email"
-                placeholder="Enter Your Email"
-                name="email"
-              />
-            </div>
-            <label class="teks-16-kejadian">Password</label>
-            <div class="frame-1">
-              <img src="/asset/images/Password.png" alt="password" />
-              <input
-                type="password"
-                placeholder="Enter Your Password"
-                name="password"
-              />
-              <img
-                class="eyeslash"
-                src="/asset/images/EyeSlash.png"
-                alt="eyeslash"
-              />
-            </div>
-          </form>
-          <a href="../dashboardv1/index.html" class="link">Login</a>
-          <p class="teks-16" style="text-align: center">
-            Not Have An Account?
-            <a href="/src/register/index.html" style="text-decoration: none"
-              >Register</a
-            >
-          </p>
+          <div class="kejadian" id="login">
+            <form id="login">
+              <label class="teks-16-kejadian">Email</label>
+              <div class="frame-1">
+                <img src="/asset/images/mail.png" alt="mail" />
+                <input
+                  id="email"
+                  type="email"
+                  placeholder="Enter Your Email"
+                  name="email"
+                />
+              </div>
+              <label class="teks-16-kejadian">Password</label>
+              <div class="frame-1">
+                <img src="/asset/images/Password.png" alt="password" />
+                <input
+                  id="password"
+                  type="password"
+                  placeholder="Enter Your Password"
+                  name="password"
+                />
+                <img
+                  class="eyeslash"
+                  id="eyeLogin"
+                  src="/asset/images/register/closeEye.svg"
+                  alt="eyeslash"
+                />
+              </div>
+              <p id="error" class="message error"></p>
+              <button class="link" id="submit">Login</button>
+            </form>
+
+            <p class="teks-16" style="text-align: center">
+              Not Have An Account?
+              <a href="/src/register/index.html" style="text-decoration: none"
+                >Register</a
+              >
+            </p>
+          </div>
         </div>
       </div>
       <div class="content-two">
         <img src="/asset/images/handtwo.png" alt="hand" />
       </div>
     </section>
+    <script src="../login/script.js"></script>
   </body>
 </html>

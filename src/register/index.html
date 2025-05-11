@@ -44,37 +44,44 @@
             </div>
           </div>
           <img style="margin-top: 10px;" src="/asset//images/Or web.png" alt="Or" />
-         <form class="kejadian">
-            <label for="email" class="teks-16-kejadian">Email</label>
-            <div class="frame-1">
-              <img src="/asset/images/mail.png" alt="mail" />
-            <input id="email" type="email" placeholder="Enter Your Email" class="teks-12"
-              name="email" required/>
+         <form class="kejadian" id="register">
+            <div class="container-input">
+              <label for="email" class="teks-16-kejadian">Email</label>
+              <div class="frame-1">
+                <img src="/asset/images/mail.png" alt="mail" />
+              <input id="email" type="email" placeholder="Enter Your Email" class="teks-12"
+                name="email" required/>
+              </div>
             </div>
-            <label for="password" class="teks-16-kejadian">Password</p>
-            <div class="frame-1">
-              <img src="/asset/images/Password.png" alt="password" />
-            <input id="confirm" type="password" placeholder="Enter Your Password" class="teks-12"
-              name="password"required/>
-              <img
-                class="eyeslash"
-                src="/asset/images/EyeSlash.png"
-                alt="eyeslash"
-              />
+            <div class="container-input">
+              <label for="password" class="teks-16-kejadian">Password</label>
+              <div class="frame-1">
+                <img src="/asset/images/Password.png" alt="password" />
+              <input id="password" type="password" placeholder="Enter Your Password" class="teks-12"
+                name="password"required/>
+                <img
+                  class="eyeslash"
+                  id="eyeslash"
+                  src="/asset/images/register/closeEye.svg"
+                  alt="eyeslash"
+                />
+              </div>
             </div>
-            <label for="confirm" class="teks-16-kejadian">Confirm Password</p>
+            <label for="confirm" class="teks-16-kejadian">Confirm Password</label>
             <div class="frame-1">
               <img src="/asset/images/Password.png" alt="password icon" />
             <input id="confirm" type="password" placeholder="Enter Your Password Again" class="teks-12"
-              name="password" required/>
+              name="confirm" required/>
               <img
                 class="eyeslash"
-                src="/asset/images/EyeSlash.png"
+                id="eyeConfirm"
+                src="/asset/images/register/closeEye.svg"
                 alt="eyeslash"
               />
             </div>
+            <p id="error" class="message error"></p>
+            <button type="submit" class="register-button">Register</button>
           </form>
-          <button type="submit">Register</button>
           <p class="teks-16" style="text-align: center">
             Have An Account? <a style="text-decoration: none;" href="/src/login/index.html">Login</a>
           </p>
@@ -83,6 +90,7 @@
       <div class="content-two">
         <img src="/asset/images/hand.png" alt="hand" />
       </div>
+      <script src="./script.js"></script>
     </section>
   </body>
 </html>
