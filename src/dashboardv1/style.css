@@ -155,6 +155,7 @@ nav {
   justify-content: center;
   align-items: center;
   gap: 10px;
+  text-decoration: none;
 }
 .button-topup:hover {
   background-color: #1430d0;
@@ -271,6 +272,243 @@ nav {
   width: 100px;
   height: 20px;
 }
+@media screen and (max-width: 768px) {
+  nav {
+    width: 768px;
+    height: 138px;
+    position: static;
+    background-color: #2948ff;
+  }
+  header {
+    width: 100%;
+  }
+  .content {
+    margin-top: 5%;
+    margin-left: 0;
+  }
+  .navbar {
+    margin-right: 0;
+    flex-direction: row-reverse;
+    margin-bottom: 10%;
+  }
+  .navbar > p:first-child {
+    font-size: 12px;
+    display: block;
+  }
+  .navbar > div {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    color: white;
+  }
+  .navbar img {
+    margin-top: 15px;
+  }
+  .navbar > img:last-child {
+    display: none;
+  }
+  .frame-13 {
+    margin-left: 0;
+    display: none;
+  }
+  .navbar > div p:first-child {
+    display: flex;
+    font-size: 12px;
+    margin-top: 14px;
+    font-weight: 400px;
+  }
+  .navbar > div p:last-child {
+    margin: 0;
+    color: white;
+  }
+
+  .navigation {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 768px;
+    height: 74px;
+    border-right: none;
+    border-top: 1px solid #e8e8e8;
+    padding: 10px 20px;
+    background-color: white;
+    display: flex;
+    justify-content: space-around;
+    z-index: 1000;
+    box-shadow: 0px -2px 5px #00000014;
+  }
+  .content2 {
+    width: 768px;
+  }
+  .content2-sub {
+    width: 768px;
+  }
+  .content2-item {
+    padding: 20px;
+    width: 768px;
+  }
+  .content-navigation {
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    width: 75px;
+    height: 60px;
+  }
+  .content-navigation .teks-16 {
+    font-size: 10px;
+  }
+
+  .item-navigation {
+    padding: 4px 8px;
+    border-radius: 6px;
+    font-size: 14px;
+    flex-direction: column;
+    gap: 0;
+    width: 75px;
+    height: 60px;
+  }
+  .icon-dashboard1 {
+    fill: #4f5665;
+    display: block;
+  }
+  .item-navigation:hover {
+    background-color: white;
+  }
+  .content {
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+  .content1,
+  .content1-2 {
+    width: 768px;
+  }
+  .content1-2 {
+    position: relative;
+  }
+  .content1-3 {
+    width: 100%;
+    height: auto;
+  }
+  .icon-dashboard {
+    color: #2948ff;
+  }
+  .item-navigation p {
+    color: #2948ff;
+  }
+  .chart,
+  .chart img {
+    width: 768px;
+  }
+  .item1 {
+    width: 100%;
+  }
+  .item1 .teks-16 {
+    font-size: 10px;
+  }
+  .chart {
+    height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .chart img,
+  .income {
+    width: 634px;
+  }
+  .content1 {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .fast {
+    display: none;
+  }
+  .filter {
+    width: 95px;
+    height: 25px;
+  }
+  .content1-1 {
+    width: 600px;
+    height: 108px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    position: absolute;
+    align-items: center;
+    top: 12%;
+    border-radius: 24px;
+    background-position: center calc(100% + 20px);
+    background-image: url(../../asset/images/dashboardv1/waveee.svg);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    box-shadow: 0px 5px 5px #00000014;
+  }
+  .content1-item {
+    width: 275px;
+    height: 65px;
+    border: none;
+  }
+  .remove {
+    display: none;
+  }
+  .topup {
+    width: 341px;
+    margin-right: 0;
+  }
+  .button-topup {
+    width: 159px;
+    height: 35px;
+  }
+  .button-topup .teks-16 {
+    font-size: 12px;
+  }
+  .content1-2 {
+    width: 100%;
+    display: flex;
+    border: none;
+    margin-top: 20%;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+  }
+  .content1-item-1 {
+    width: 75px;
+    height: 85px;
+    gap: 0;
+  }
+  .item1 img {
+    display: none;
+  }
+  .item1 p {
+    margin: 0;
+  }
+  .content2 {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    margin-bottom: 20%;
+  }
+  .content2-sub {
+    border: none;
+  }
+  .content1-3 {
+    border: none;
+    width: 768px;
+  }
+  .teks-24 {
+    font-size: 12px;
+  }
+  .teks-16 {
+    font-size: 14px;
+  }
+}
 @media screen and (max-width: 500px) {
   nav {
     width: 500px;
@@ -278,10 +516,10 @@ nav {
     position: static;
     background-color: #2948ff;
   }
-  .navbar{
+  .navbar {
     padding: 10px;
   }
-  .content1{
+  .content1 {
     width: 500px;
   }
   header {
