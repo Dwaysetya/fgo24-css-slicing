@@ -1,27 +1,34 @@
-console.log("coba");
+let peopleData = [];
 
 fetch("data/people.json")
-  .then((Response) => Response.json())
+  .then((response) => response.json())
   .then((data) => {
-    const container = document.getElementById("peopleData");
+    peopleData = data;
+    renderPeople(peopleData);
+  })
+  .catch((error) => {
+    console.log("Data tidak ditemukan", error);
+  });
 
-    const result = document.getElementById("result");
+function renderPeople(data) {
+  const container = document.getElementById("peopleData");
+  const result = document.getElementById("result");
 
-    const total = data.length;
-    if (total > 0) {
-      result.textContent = `${total} Result Found For Ghaluh`;
-    }
-    data.forEach((people, index) => {
-      const div = document.createElement("div");
+  container.innerHTML = "";
+  result.textContent = "";
 
-      if (index % 2 == 0) {
-        div.className = "two-find-1";
-      } else {
-        div.className = "two-find-11";
-      }
+  const total = data.length;
+  if (total > 0) {
+    result.textContent = `${total}  Result Found For Ghaluh`;
+  }
 
-      div.innerHTML = `
-      <div class="people">
+  data.forEach((people, index) => {
+    const div = document.createElement("div");
+
+    div.className = index % 2 === 0 ? "two-find-1" : "two-find-11";
+
+    div.innerHTML = `
+    <div class="people">
           <img src="${people.photo}" alt="people" />
         </div>
         <div class="phone">
@@ -36,11 +43,46 @@ fetch("data/people.json")
           <img src="/asset/images/transfer/Star.svg" alt="trash" />
         </div>
       `;
-      container.appendChild(div);
+
+    container.appendChild(div);
+
+    div.addEventListener("click", function (e) {
+      e.preventDefault();
+
+      const variabelData = `name=${people.name}&phone=${people.phone}&photo=${people.photo}`;
+      const searchParams = new URLSearchParams(variabelData);
+      console.log("data", searchParams.toString());
+      const url = `/src/transfer-detail/index.html?${searchParams.toString()}`;
+      window.location.href = url;
     });
-  })
-  .catch((error) => {
-    console.log("data tidak ditemukan", error);
   });
+}
+
+//search
+const searchInput = document.querySelector('input[name="search"]');
+
+searchInput.addEventListener("input", function () {
+  const dataSearch = this.value.toLowerCase();
+
+  const filter = peopleData.filter((person) => {
+    return (
+      person.name.toLowerCase().includes(dataSearch) ||
+      person.phone.toLowerCase().includes(dataSearch)
+    );
+  });
+  renderPeople(filter);
+});
 
 //show-dropdown
+const hamburgerButton = document.querySelector(".toggle");
+const menu = document.querySelector(".dropdown");
+
+hamburgerButton.addEventListener("click", function () {
+  menu.classList.add("active");
+});
+
+document.addEventListener("click", function (e) {
+  if (!menu.contains(e.target)) {
+    menu.classList.remove("active");
+  }
+});

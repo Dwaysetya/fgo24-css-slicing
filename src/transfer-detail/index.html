@@ -21,28 +21,32 @@
         </div>
         <div class="navbar">
           <p class="teks-16">Ghaluh Wizard</p>
-          <img class="profile"
+          <img
+            class="profile"
             src="/asset/images/dashboardv1/Ellipse 185.svg"
             alt="profile"
           />
           <ul class="menu">
-           <li><a href="#">Home</a></li>
-           <li class="dropdown">
-             <a href="#"> <img
-                src="/asset/images/dashboardv1/down.svg"
-                alt="dropdown icon"
-                class="dropdown"
-             /></a>
+            <li class="dropdown">
+              <a href="#">
+                <img
+                  src="/asset/images/dashboardv1/down.svg"
+                  alt="dropdown icon"
+                  class="toggle"
+              /></a>
               <ul class="dropdown-menu">
                 <li>
-                  <a href="#" class="teks-14">
-                    <img src="/asset/images/transfer/person.svg" alt="person">
+                  <a href="../edit-profile/index.html" class="teks-14">
+                    <img src="/asset/images/transfer/person.svg" alt="person" />
                     Profile
                   </a>
                 </li>
                 <li>
-                   <a href="#" class="logout">
-                    <img src="/asset/images/transfer-detail/Log Out.svg" alt="person">
+                  <a href="../login/index.html" class="logout">
+                    <img
+                      src="/asset/images/transfer-detail/Log Out.svg"
+                      alt="person"
+                    />
                     Keluar
                   </a>
                 </li>
@@ -62,11 +66,15 @@
             />
             <p class="teks-16">Dashboard</p>
           </a>
-          <a href="../transfer/index.html" class="item-navigation" style="background-color: #2948ff;">
+          <a
+            href="../transfer/index.html"
+            class="item-navigation"
+            style="background-color: #2948ff"
+          >
             <img src="/asset/images/transfer/Send.svg" alt="send" />
             <p style="color: white" class="teks-16">Transfer</p>
           </a>
-          <a href="../historyTransaction/" class="item-navigation" >
+          <a href="../historyTransaction/" class="item-navigation">
             <img src="/asset/images/transfer/history (2).svg" alt="history" />
             <p style="color: #4f5665" class="teks-16">History</p>
           </a>
@@ -85,6 +93,85 @@
         </div>
       </div>
       <div class="content">
+        <div class="modal">
+          <div class="frame-35">
+            <div class="frame-12">
+              <p>TRANSFER TO GHALUH 1</p>
+            </div>
+            <p class="teks-30">Enter Your Pin 👋</p>
+            <p class="teks-16">Enter Your Pin For Transaction</p>
+            <form class="pin-container" id="inputPin">
+              <div class="pin-inputs">
+                <input
+                  type="password"
+                  maxlength="1"
+                  class="pin-box"
+                  autofocus
+                />
+                <input type="password" maxlength="1" class="pin-box" />
+                <input type="password" maxlength="1" class="pin-box" />
+                <input type="password" maxlength="1" class="pin-box" />
+                <input type="password" maxlength="1" class="pin-box" />
+                <input type="password" maxlength="1" class="pin-box" />
+              </div>
+              <button type="submit">Next</button>
+            </form>
+            <p class="message error"></p>
+            <p class="teks-16" style="text-align: center">
+              Forgot Your Pin?
+              <a style="text-decoration: none" href="http://">Reset</a>
+            </p>
+          </div>
+        </div>
+        <div class="modal-success">
+          <div class="frame-35-success">
+            <div class="frame-12-success">
+              <p>TRANSFER TO GHALUH 1</p>
+            </div>
+            <div class="frame-35-item-success">
+              <img
+                src="/asset/images/success/Contact us-pana 1.svg"
+                alt="success"
+              />
+              <p class="teks-22-success">
+                Yeay Transfer <span style="color: #1ec15f">Success</span>
+              </p>
+              <p class="teks-14-success">
+                Thank you for using this application for your financial
+              </p>
+              <a href="../transfer/index.html" class="done-success" type="submit">Done</a>
+              <a
+                href="../transfer/index.html"
+                class="transfer-success"
+                type="submit"
+                >Transfer Again</a
+              >
+            </div>
+          </div>
+        </div>
+        <div class="modal-failed">
+          <div class="frame-35-failed">
+            <div class="frame-12-failed">
+              <p>TRANSFER TO GHALUH 1</p>
+            </div>
+            <div class="frame-35-item-failed">
+              <img src="/asset/images/failed/Oh no-cuate 1.svg" alt="success" />
+              <p class="teks-22-failed">Oops Transfer <span>Failed</span></p>
+              <p class="teks-14-failed">
+                Sorry Theres is an issue for your transfer, try again later !
+              </p>
+              <a href="./index.html" class="done-failed" type="button"
+                >Try Again</a
+              >
+              <a
+                href="../dashboardv1/index.html"
+                class="transfer-failed"
+                type="button"
+                >Back To Dashboard</a
+              >
+            </div>
+          </div>
+        </div>
         <div class="content-item">
           <div class="content-item-one">
             <div class="item-one">
@@ -92,81 +179,97 @@
               <span style="color: #0b132a; font-weight: 600" class="teks-16"
                 >Transfer Money</span
               >
-               <div class="transfer">
+              <div class="transfer">
                 <h1>Transfer</h1>
               </div>
             </div>
             <div class="frame-content">
               <div class="frame-content-1">
-                <img src="/asset/images/transfer-detail/Group 1309 (4).svg" alt="one">
-                <span style="color: #4F5665;">Find People</span>
+                <img
+                  src="/asset/images/transfer-detail/Group 1309 (4).svg"
+                  alt="one"
+                />
+                <span style="color: #4f5665">Find People</span>
               </div>
               <div class="frame-content-1">
-                <p style="color: #4F5665;">---------------</p>
+                <p style="color: #4f5665">---------------</p>
               </div>
               <div class="frame-content-1">
-                 <img src="/asset/images/transfer-detail/Group 1309 (3).svg" alt="one">
-                <span style="color: #2948FF;">Set Nominal</span>
+                <img
+                  src="/asset/images/transfer-detail/Group 1309 (3).svg"
+                  alt="one"
+                />
+                <span style="color: #2948ff">Set Nominal</span>
               </div>
               <div class="frame-content-1">
-                <p style="color: #4F5665;">---------------</p>
+                <p style="color: #4f5665">---------------</p>
               </div>
               <div class="frame-content-1">
-                   <img src="/asset/images/transfer/Group 1309 (2).svg" alt="one">
-                <span style="color: #4F5665;">Finish</span>
+                <img
+                  src="/asset/images/transfer/Group 1309 (2).svg"
+                  alt="one"
+                />
+                <span style="color: #4f5665">Finish</span>
               </div>
             </div>
           </div>
           <div class="item-two">
             <div class="two-find-2">
               <div class="find-people">
-                <p class="teks-16" >
-                  People Information
-                </p>
+                <p class="teks-16">People Information</p>
               </div>
             </div>
             <div class="two-find-1">
-              <div class="people">
-                <img
-                  src="/asset/images/history/Rectangle 648.svg"
-                  alt="people"
-                />
-                <div class="name">
-                  <div class="name-item">
-                    <p style="font-weight: 600; color: #0B132A; margin: 0;" class="teks-16">Ghaluh 1</p>
-                  </div>
-                   <div>
-                    <p style="font-weight: 400; margin: 0;" class="teks-14">(239) 555-0108</p>
-                  </div>
-                   <div>
-                    <img src="/asset/images/transfer-detail/Sidenav item.svg" alt="verify">
-                  </div>
-                </div>
-              </div>
+              <div class="people"></div>
               <div class="star">
                 <img src="/asset/images/transfer/Star.svg" alt="trash" />
               </div>
             </div>
             <div class="amount">
               <p class="teks-16">Amount</p>
-              <p class="teks-14">Type the amount you want to transfer and then
-                 press continue to the next steps.</p>
+              <p class="teks-14">
+                Type the amount you want to transfer and then press continue to
+                the next steps.
+              </p>
             </div>
-            <div class="nominal">
-              <img src="/asset/images/transfer-detail/Vector.svg" alt="money">
-              <input type="text" name="input" required placeholder="Enter Nominal Transfer">
-            </div>
-             <div class="amount">
-              <p class="teks-16">Notes</p>
-              <p class="teks-14">You can add some notes for this transfer such as payment coffee or something</p>
-            </div>
-            <div class="notes">
-              <input type="text" name="input" required placeholder="Enter Some Notes">
-            </div>
-            <button class="submit-transfer">Submit & Transfer</button>
+            <form id="amount">
+              <div class="nominal">
+                <img
+                  src="/asset/images/transfer-detail/Vector.svg"
+                  alt="money"
+                />
+                <input
+                  type="text"
+                  name="nominal"
+                  id="nominal"
+                  required
+                  placeholder="Enter Nominal Transfer"
+                />
+              </div>
+              <div class="amount">
+                <p class="teks-16">Notes</p>
+                <p class="teks-14">
+                  You can add some notes for this transfer such as payment
+                  coffee or something
+                </p>
+              </div>
+              <div class="notes">
+                <input
+                  type="text"
+                  name="notes"
+                  required
+                  placeholder="Enter Some Notes"
+                />
+              </div>
+              <div class="message error"></div>
+              <button type="submit" class="submit-transfer">
+                Submit & Transfer
+              </button>
+            </form>
           </div>
         </div>
       </div>
     </section>
+    <script src="./script.js"></script>
   </body>
 </html>

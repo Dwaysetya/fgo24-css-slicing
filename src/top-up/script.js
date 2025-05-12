@@ -1,14 +1,3 @@
-fetch("data/people.json")
-  .then((Response) => Response.json())
-  .then((data) => {
-    const container = document.getElementById("peopleData");
-    data.forEach((element) => {});
-  })
-  .catch((error) => {
-    console.log("data tidak ditemukan", error);
-  });
-
-  //show hambueger
 const hamburgerButton = document.querySelector(".toggle");
 const menu = document.querySelector(".dropdown");
 
@@ -21,4 +10,3 @@ document.addEventListener("click", function (e) {
     menu.classList.remove("active");
   }
 });
-

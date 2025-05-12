@@ -111,8 +111,9 @@ nav {
 .content {
   margin-left: 35%;
   width: 80%;
-  height: 948px;
+  height: 960px;
   background-color: white;
+   margin-bottom: 10%;
 }
 .content-item {
   width: 100%;
@@ -122,7 +123,7 @@ nav {
   justify-content: center;
   align-items: center;
   gap: 40px;
-  margin-top: 20px;
+  margin-top: 15%;
 }
 .content-item-one {
   width: auto;
@@ -140,7 +141,7 @@ nav {
 }
 .item-two {
   width: 1061px;
-  height: 820px;
+  height: 850px;
   border: 1px solid #e8e8e8;
   display: flex;
   flex-direction: column;
@@ -339,18 +340,11 @@ label {
 
 .menu {
   list-style: none;
-  margin: 0;
   padding: 0;
 }
-
 .menu > li {
   position: relative;
   margin-right: 1.5rem;
-}
-
-.menu a {
-  color: white;
-  text-decoration: none;
 }
 
 .dropdown-menu {
@@ -391,6 +385,10 @@ label {
   display: flex;
   flex-direction: row;
   gap: 10px;
+  text-decoration: none;
+}
+.dropdown-menu li a:hover{
+  background-color: #2948ff;
 }
 .dropdown-menu li .teks-14 {
   font-weight: 400;
@@ -399,14 +397,16 @@ label {
   color: #d00000;
   background-color: white;
 }
-
-.dropdown:hover .dropdown-menu {
+ .dropdown.active .dropdown-menu{
   display: block;
-}
+ }
 .transfer {
   display: none;
 }
-@media screen and (max-width: 375px) {
+.password a{
+  text-decoration: none;
+}
+@media screen and (max-width: 1149px) {
   nav {
     display: none;
   }
@@ -417,16 +417,19 @@ label {
     display: none;
   }
   .item-two {
-    width: 375px;
+    width: 100%;
     border: none;
     margin-bottom: 20%;
   }
+  .content-item-one{
+    width: 100%;
+  }
   .section-container {
-    width: 375px;
+    width: 100%;
   }
   .item-one,
   body {
-    width: 375px;
+    width: 100%;
   }
   .item-one img,
   .item-one span {
@@ -434,12 +437,13 @@ label {
   }
   .content-item {
     margin-top: 12px;
-    width: 375px;
+    width: 100%;
+    margin-left: 0;
     gap: 0;
   }
   .transfer {
     display: flex;
-    width: 375px;
+    width: 100%;
     height: 54px;
     background-color: #2948ff;
     padding: 15px 24px;
@@ -462,7 +466,253 @@ label {
     position: fixed;
     bottom: 0;
     left: 0;
-    width: 375px;
+    width: 100%;
+    height: 74px;
+    border-right: none;
+    border-top: 1px solid #e8e8e8;
+    padding: 10px 20px;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    z-index: 1000;
+    box-shadow: 0px -2px 5px #00000014;
+  }
+  .content-navigation {
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 60px;
+    width: 100%;
+    height: 60px;
+  }
+  .content-navigation .teks-16 {
+    font-size: 10px;
+  }
+
+  .item-navigation {
+    padding: 4px 8px;
+    border-radius: 6px;
+    font-size: 14px;
+    flex-direction: column;
+    gap: 0;
+    width: 75px;
+    height: 60px;
+  }
+  .icon-dashboard1 {
+    fill: #4f5665;
+    display: block;
+  }
+  .item-navigation:hover {
+    background-color: white;
+  }
+  .content {
+    flex-direction: column;
+    width: 100%;
+    margin-left: 0;
+    height: auto;
+    display: block;
+  }
+  .content1,
+  .content1-2 {
+    width: 100%;
+  }
+  .content1-2 {
+    position: relative;
+  }
+  .content1-3 {
+    width: 100%;
+    height: auto;
+  }
+  .icon-dashboard {
+    color: #2948ff;
+  }
+  .item-navigation p {
+    color: #2948ff;
+  }
+  .item1 .teks-16 {
+    font-size: 10px;
+  }
+  .teks-24 {
+    font-size: 12px;
+  }
+  .teks-16 {
+    font-size: 14px;
+  }
+  .two-find-11 {
+    width: 100%;
+    padding: 20px;
+  }
+  .two-find-1 {
+    width: 100%;
+    padding: 0;
+  }
+  .price {
+    width: 118px;
+  }
+  .two-find-2 {
+    width: 100%;
+    height: 50px;
+    flex-direction: column;
+    align-items: start;
+    padding: 0;
+    margin: 0;
+    margin-top: 5%;
+    gap: 0;
+  }
+  .two-find-21 {
+    display: none;
+  }
+  .phone {
+    flex-direction: column;
+    gap: 10px;
+    width: 217px;
+    height: 40px;
+    align-items: start;
+    justify-content: start;
+    display: flex;
+  }
+  .trash {
+    display: none;
+  }
+  .trash img {
+    width: 16px;
+    height: 16px;
+  }
+  .name {
+    justify-content: start;
+    width: 183px;
+    height: 105px;
+  }
+  .name p {
+    width: 133px;
+  }
+  .search-container {
+    width: 335px;
+  }
+  .find-people .teks-12 {
+    display: none;
+  }
+  .people img {
+    width: 80px;
+  }
+  .nominal,
+  .amount,
+  .notes,
+  .submit-transfer {
+    width: 100%;
+  }
+  .amount {
+    height: 60px;
+    margin: 0;
+  }
+  .nominal {
+    height: 41px;
+  }
+  .notes {
+    height: 170px;
+  }
+  .notes input {
+    width: 300px;
+  }
+  .amount .teks-14 {
+    font-size: 12px;
+    font-weight: 400;
+  }
+  .amount > .teks-16 {
+    font-size: 14px;
+    font-weight: 500;
+  }
+  .button-name1,
+  .button-name2 {
+    width: 183px;
+    height: 45px;
+  }
+  .people img {
+    width: 20px;
+    height: 20px;
+  }
+  .form-action {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 10px;
+  }
+}
+@media screen and (max-width: 678px){
+.content-navigation{
+  gap: 30px;
+}
+}
+@media screen and (max-width: 473px){
+.content-navigation{
+  gap: 10px;
+}
+.item-two p{
+  font-size: 12px;
+}
+}
+@media screen and (max-width: 375px) {
+  nav {
+    display: none;
+  }
+  header {
+    margin: 0;
+  }
+  .frame-content {
+    display: none;
+  }
+  .item-two {
+    width: 100%;
+    border: none;
+    margin-bottom: 20%;
+  }
+  .content-item-one{
+    width: 100%;
+  }
+  .section-container {
+    width: 100%;
+  }
+  .item-one,
+  body {
+    width: 100%;
+  }
+  .item-one img,
+  .item-one span {
+    display: none;
+  }
+  .content-item {
+    margin-top: 12px;
+    width: 100%;
+    margin-left: 0;
+    gap: 0;
+  }
+  .transfer {
+    display: flex;
+    width: 100%;
+    height: 54px;
+    background-color: #2948ff;
+    padding: 15px 24px;
+    align-items: center;
+    position: fixed;
+  }
+  .transfer h1 {
+    color: white;
+    font-size: 14px;
+    font-weight: 500;
+  }
+  .find-people .teks-16 {
+    font-size: 14px;
+    font-weight: 500;
+  }
+  .people {
+    justify-content: start;
+  }
+  .navigation {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
     height: 74px;
     border-right: none;
     border-top: 1px solid #e8e8e8;
@@ -504,13 +754,13 @@ label {
   .content {
     flex-direction: column;
     width: 100%;
+    margin-left: 0;
     height: auto;
-    margin-left: 10%;
     display: block;
   }
   .content1,
   .content1-2 {
-    width: 375px;
+    width: 100%;
   }
   .content1-2 {
     position: relative;
@@ -535,18 +785,18 @@ label {
     font-size: 14px;
   }
   .two-find-11 {
-    width: 375px;
+    width: 100%;
     padding: 20px;
   }
   .two-find-1 {
-    width: 375px;
+    width: 100%;
     padding: 0;
   }
   .price {
     width: 118px;
   }
   .two-find-2 {
-    width: 375px;
+    width: 100%;
     height: 50px;
     flex-direction: column;
     align-items: start;

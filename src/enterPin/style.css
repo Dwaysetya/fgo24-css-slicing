@@ -67,7 +67,12 @@ section .frame-35 {
   flex-direction: column;
   align-items: center;
 }
-
+.success{
+  color: green;
+}
+.error{
+  color: red;
+}
 .pin-inputs {
   width: 100%;
   display: flex;

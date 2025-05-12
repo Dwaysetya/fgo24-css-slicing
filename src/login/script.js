@@ -17,15 +17,16 @@ document.getElementById("login").addEventListener("submit", function (e) {
   if (email === getData.email && password === getData.password) {
     message.textContent = "Login berhasil!";
     message.classList.add("success");
-    this.reset();
-    window.location.href = "/src/dashboardv1/";
+    window.location.href = "/src/enterPin/index.html";
   } else {
     message.textContent = "Email atau password salah!";
     message.classList.add("error");
-    this.reset();
   }
+  this.reset();
 });
 
+
+//show-eyes
 const eyeLogin = document.getElementById("eyeLogin");
 const password = document.getElementById("password");
 

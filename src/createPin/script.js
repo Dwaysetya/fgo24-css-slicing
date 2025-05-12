@@ -1,66 +1,35 @@
-const form = document.getElementById("register");
+const form = document.getElementById("inputPin");
 
 form.addEventListener("submit", function (e) {
-  const formData = new FormData(form);
-  const email = formData.get("email");
-  const password = formData.get("password");
-  const confirm = formData.get("confirm");
+  e.preventDefault();
+  const getPin = document.querySelectorAll(".pin-box");
   const message = document.querySelector(".message");
+
+  let fullPin = "";
+  getPin.forEach((item) => {
+    fullPin += item.value;
+  });
+  console.log("pin", fullPin);
 
   message.textContent = "";
   message.classList.remove("error", "success");
-  if (password.length < 6) {
-    message.textContent = "Password harus lebih dari 5 character";
+  if (fullPin.length < 6) {
+    message.textContent = "Pin harus 6 character";
     message.classList.add("error");
     return;
-  } else if (password !== confirm) {
-    message.textContent = "Confirm password harus sama";
+  } else if (!/^\d{6}$/.test(fullPin)) {
+    message.textContent = "Pin harus angka";
     message.classList.add("error");
     return;
   } else {
-    message.textContent = "Register Berhasil";
+    message.textContent = "Create Pin Berhasil";
     message.classList.add("success");
-    window.location.href = "/src/enterpin/index.html";
   }
 
-  const dataUser = {
-    email: email,
-    password: password,
+  const dataPin = {
+    pin: fullPin,
   };
 
-  localStorage.setItem("user", JSON.stringify(dataUser));
+  localStorage.setItem("pin", JSON.stringify(dataPin));
   this.reset();
-});
-
-//show eyes password
-const eyes = document.getElementById("eyeslash");
-const password = document.getElementById("password");
-
-eyes.addEventListener("click", function () {
-  const type =
-    password.getAttribute("type") === "password" ? "text" : "password";
-  password.setAttribute("type", type);
-
-  this.setAttribute(
-    "src",
-    type === "password"
-      ? "/asset/images/register/closeEye.svg"
-      : "/asset/images/register/openEye.svg"
-  );
-});
-
-const eyesConfirm = document.getElementById("eyeConfirm");
-const confirm = document.getElementById("confirm");
-
-eyesConfirm.addEventListener("click", function () {
-  const type =
-    confirm.getAttribute("type") === "password" ? "text" : "password";
-  confirm.setAttribute("type", type);
-
-  this.setAttribute(
-    "src",
-    type === "password"
-      ? "/asset/images/register/closeEye.svg"
-      : "/asset/images/register/openEye.svg"
-  );
 });

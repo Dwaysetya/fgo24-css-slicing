@@ -27,23 +27,22 @@
             alt="profile"
           />
           <ul class="menu">
-            <li><a href="#">Home</a></li>
             <li class="dropdown">
               <a href="#">
                 <img
                   src="/asset/images/dashboardv1/down.svg"
                   alt="dropdown icon"
-                  class="dropdown"
+                  class="toggle"
               /></a>
               <ul class="dropdown-menu">
                 <li>
-                  <a href="#" class="teks-14">
+                  <a href="../edit-profile/index.html" class="teks-14">
                     <img src="/asset/images/transfer/person.svg" alt="person" />
                     Profile
                   </a>
                 </li>
                 <li>
-                  <a href="#" class="logout">
+                  <a href="../login/index.html" class="logout">
                     <img
                       src="/asset/images/transfer-detail/Log Out.svg"
                       alt="person"
@@ -70,10 +69,9 @@
           <a
             href="../transfer-detail/index.html"
             class="item-navigation"
-            style="background-color: #2948ff"
           >
-            <img src="/asset/images/transfer/Send.svg" alt="send" />
-            <p style="color: white" class="teks-16">Transfer</p>
+            <img src="/asset/images/dashboardv1/Send 2.svg" alt="send" />
+            <p style="color: #4f5665" class="teks-16">Transfer</p>
           </a>
           <a href="../historyTransaction/index.html" class="item-navigation">
             <img src="/asset/images/transfer/history (2).svg" alt="history" />
@@ -83,9 +81,9 @@
             <img src="/asset/images/dashboardv1/Upload.svg" alt="Upload" />
             <p style="color: #4f5665" class="teks-16">Top Up</p>
           </a>
-          <a href="../edit-profile/index.html" class="item-navigation">
-            <img src="/asset/images/dashboardv1/2 User.svg" alt="User" />
-            <p style="color: #4f5665" class="teks-16">Profile</p>
+          <a href="../edit-profile/index.html" class="item-navigation" style="background-color: #2948ff;">
+            <img src="/asset/images/edit-profile/pp.svg" alt="User" />
+            <p style="color: white" class="teks-16">Profile</p>
           </a>
           <a href="../login/index.html" class="item-navigation">
             <img src="/asset/images/dashboardv1/Icon.svg" alt="logout" />
@@ -118,7 +116,7 @@
                   <img src="/asset/images/edit-profile/User.svg" alt="people" />
                 </div>
                 <div class="name">
-                  <button class="button-name1">
+                  <button class="button-name1" style="color: white;">
                     <img
                       src="/asset/images/edit-profile/Edit Square.svg"
                       alt="edit"
@@ -176,11 +174,11 @@
               </div>
               <div class="password">
                 <p>Password</p>
-                <p style="color: #2948ff">Change Password</p>
+                <a href="../change-password/index.html" style="color: #2948ff">Change Password</a>
               </div>
               <div class="password">
                 <p>Pin</p>
-                <p style="color: #2948ff">Change Pin</p>
+                <a href="../change-pin/index.html" style="color: #2948ff">Change Pin</a>
               </div>
               <button class="submit-transfer">Submit & Transfer</button>
             </form>
@@ -188,5 +186,6 @@
         </div>
       </div>
     </section>
+    <script src="./script.js"></script>
   </body>
 </html>

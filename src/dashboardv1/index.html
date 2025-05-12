@@ -29,32 +29,57 @@
             src="/asset/images/dashboardv1/Ellipse 185.svg"
             alt="profile"
           />
-          <img
-            style="width: 24px; height: 24px; align-self: center"
-            src="/asset/images/dashboardv1/down.svg"
-            alt="dropdown"
-          />
+          <ul class="menu">
+            <li class="dropdown">
+              <a href="#">
+                <img
+                  src="/asset/images/dashboardv1/down.svg"
+                  alt="dropdown icon"
+                  class="toggle"
+              /></a>
+              <ul class="dropdown-menu">
+                <li>
+                  <a href="../edit-profile/index.html" class="teks-14">
+                    <img src="/asset/images/transfer/person.svg" alt="person" />
+                    Profile
+                  </a>
+                </li>
+                <li>
+                  <a href="../login/index.html" class="logout">
+                    <img
+                      src="/asset/images/transfer-detail/Log Out.svg"
+                      alt="person"
+                    />
+                    Keluar
+                  </a>
+                </li>
+              </ul>
+            </li>
+          </ul>
         </div>
       </nav>
     </header>
     <section class="section-container">
       <div class="navigation">
         <div class="content-navigation">
-          <a href="../dashboardv1/index.html" class="item-navigation">
+          <a
+            href="../dashboardv1/index.html"
+            class="item-navigation"
+            style="background-color: #2948ff"
+          >
             <img
               class="icon-dashboard1"
-              src="/asset/images/dashboardv1/dashboardicon.svg"
+              src="/asset/images/dashboardv1/dashboard-two (2).svg"
               alt="dashboard"
-              
             />
-             <img
+            <img
               class="icon-dashboard"
               src="/asset/images/dashboardv1/dass.svg"
               alt="dashboard"
             />
-            <p class="teks-16" style="color: #2948ff;">Dashboard</p>
+            <p class="teks-16" style="color: white">Dashboard</p>
           </a>
-          <a href="../transfer-detail/index.html" class="item-navigation">
+          <a href="../transfer/index.html" class="item-navigation">
             <img src="/asset/images/dashboardv1/Send 2.svg" alt="send" />
             <p style="color: #4f5665" class="teks-16">Transfer</p>
           </a>
@@ -200,7 +225,12 @@
               <p style="font-weight: 600; color: #0b132a" class="teks-16">
                 Transaction History
               </p>
-              <p style="color: #2948ff" class="teks-12">See All</p>
+              <a
+                href="../historyTransaction/index.html"
+                style="color: #2948ff; text-decoration: none"
+                class="teks-12"
+                >See All</a
+              >
             </div>
             <div class="content2-item">
               <div class="people">
@@ -404,5 +434,6 @@
         </div>
       </div>
     </section>
+    <script src="./script.js"></script>
   </body>
 </html>

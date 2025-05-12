@@ -1,6 +1,7 @@
 const form = document.getElementById("register");
 
 form.addEventListener("submit", function (e) {
+    e.preventDefault();
   const formData = new FormData(form);
   const email = formData.get("email");
   const password = formData.get("password");
