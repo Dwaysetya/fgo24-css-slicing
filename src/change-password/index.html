@@ -27,21 +27,25 @@
           />
           <ul class="menu">
            <li class="dropdown">
-             <a href="#"> <img
-                src="/asset/images/dashboardv1/down.svg"
-                alt="dropdown icon"
-                class="dropdown"
-             /></a>
+              <a href="#">
+                <img
+                  src="/asset/images/dashboardv1/down.svg"
+                  alt="dropdown icon"
+                  class="toggle"
+              /></a>
               <ul class="dropdown-menu">
                 <li>
-                  <a href="#" class="teks-14">
-                    <img src="/asset/images/transfer/person.svg" alt="person">
+                  <a href="../edit-profile/index.html" class="teks-14">
+                    <img src="/asset/images/transfer/person.svg" alt="person" />
                     Profile
                   </a>
                 </li>
                 <li>
-                   <a href="#" class="logout">
-                    <img src="/asset/images/transfer-detail/Log Out.svg" alt="person">
+                  <a href="../login/index.html" class="logout">
+                    <img
+                      src="/asset/images/transfer-detail/Log Out.svg"
+                      alt="person"
+                    />
                     Keluar
                   </a>
                 </li>
@@ -59,19 +63,19 @@
               src="/asset/images/history/dashboard-two.svg"
               alt="dashboard"
             />
-            <p class="teks-16">Dashboard</p>
+            Dashboard
           </a>
           <a href="../transfer/index.html" class="item-navigation">
             <img src="/asset/images/dashboardv1/Send 2.svg" alt="send" />
-            <p style="color: #4f5665" class="teks-16">Transfer</p>
+          Transfer
           </a>
           <a href="../historyTransaction/index.html" class="item-navigation" >
             <img src="/asset/images/transfer/history (2).svg" alt="history" />
-            <p style="color: #4f5665" class="teks-16">History</p>
+          History
           </a>
           <a href="../top-up/index.html" class="item-navigation">
             <img src="/asset/images/dashboardv1/Upload.svg" alt="Upload" />
-            <p style="color: #4f5665" class="teks-16">Top Up</p>
+           Top Up
           </a>
           <a href="../edit-profile/index.html" class="item-navigation" style="background-color: #2948ff;">
             <img src="/asset/images/edit-profile/pp.svg" alt="User" />
@@ -79,7 +83,7 @@
           </a>
           <a href="../login/index.html" class="item-navigation">
             <img src="/asset/images/dashboardv1/Icon.svg" alt="logout" />
-            <p style="color: #4f5665" class="teks-16">Keluar</p>
+            <p style="color: red;" class="teks-16">Keluar</p>
           </a>
         </div>
       </div>
@@ -91,9 +95,12 @@
               <span style="color: #0b132a; font-weight: 600" class="teks-16"
                 >Profile</span
               >
+               <div class="transfer">
+                <h1>Profile</h1>
+              </div>
             </div>
           </div>
-          <form class="item-two">
+          <form class="item-two" id="changePassword">
             <div class="two-find-2">
               <div class="find-people">
                 <p class="teks-16" >
@@ -104,25 +111,42 @@
             <label for="Existing">Existing Password</label>
             <div class="nominal">
               <img src="/asset/images/Password.png" alt="money">
-              <input type="text" name="Existing" required placeholder="Enter Your Existing Password">
-              <img src="/asset/images/EyeSlash.png" alt="money">
+              <input id="existing" type="password" name="existing" required placeholder="Enter Your Existing Password">
+              <img
+                class="eyeslash"
+                id="eyeExisting"
+                src="/asset/images/register/closeEye.svg"
+                alt="eyeslash"
+              />
             </div>
             <label for="password">New Password</label>
             <div class="nominal">
-              <img src="/asset/images/Password.png" alt="money">
-              <input type="text" name="password" required placeholder="Enter Your New Password">
-              <img src="/asset/images/EyeSlash.png" alt="money">
+              <img src="/asset/images/Password.png" alt="eyes">
+              <input id="password" type="password" name="password" required placeholder="Enter Your New Password">
+              <img
+                class="eyeslash"
+                id="eyePassword"
+                src="/asset/images/register/closeEye.svg"
+                alt="eyeslash"
+              />
             </div>
             <label for="confirm">Confirm New Password</label>
             <div class="nominal">
-              <img src="/asset/images/Password.png" alt="money">
-              <input type="text" name="confirm" required placeholder="Re-Type Your New Password">
-              <img src="/asset/images/EyeSlash.png" alt="money">
+              <img src="/asset/images/Password.png" alt="eyes">
+              <input id="confirm" type="password" name="confirm" required placeholder="Re-Type Your New Password">
+              <img
+                class="eyeslash"
+                id="eyeConfirm"
+                src="/asset/images/register/closeEye.svg"
+                alt="eyeslash"
+              />
             </div>
-            <button class="submit">Submit</button>
+            <button class="submit" type="submit">Submit</button>
+            <p class="message error"></p>
           </form>
         </div>
       </div>
     </section>
+    <script src="./script.js"></script>
   </body>
 </html>

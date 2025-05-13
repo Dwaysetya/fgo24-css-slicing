@@ -10,7 +10,7 @@ fetch("data/people.json")
     console.log("Data tidak ditemukan", error);
   });
 
-function renderPeople(data) {
+function renderPeople(data, dataSearch) {
   const container = document.getElementById("peopleData");
   const result = document.getElementById("result");
 
@@ -19,7 +19,9 @@ function renderPeople(data) {
 
   const total = data.length;
   if (total > 0) {
-    result.textContent = `${total}  Result Found For Ghaluh`;
+    result.textContent = `${total}  Result Found For ${dataSearch}`;
+  } else {
+    result.textContent = "";
   }
 
   data.forEach((people, index) => {
@@ -70,7 +72,7 @@ searchInput.addEventListener("input", function () {
       person.phone.toLowerCase().includes(dataSearch)
     );
   });
-  renderPeople(filter);
+  renderPeople(filter, dataSearch);
 });
 
 //show-dropdown

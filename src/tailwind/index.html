@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="min-h-screen">
+      <div
+        class="h-24 flex justtify-between items-center shadow-lg px-10 place-content-between"
+      >
+        <div class="">E-Wallet</div>
+        <div class="rounded-full size flex gap-4 justify-center items-center">
+          <span> Dway Setya</span>
+          <img src="../../asset/images/dashboardv1/Ellipse 185.svg" alt="" />
+          <span><i data-lucide="chevron-down"></i></span>
+        </div>
+      </div>
+      <div class="main flex">
+        <div
+          class="sidebar w-[262px] p-5 flex gap-2 flex-col shadow-md justify-center items-center"
+        >
+          <div class="container flex flex-col border-solid gap-2 min-h-screen">
+            <div
+              class="w-full h-[45px] flex p-2 gap-5 items-center rounded hover:bg-blue-800 hover:text-white"
+            >
+              <i data-lucide="layout-dashboard"></i><span>Dashboard</span>
+            </div>
+            <div
+              class="w-full h-[45px] flex p-2 gap-5 items-center rounded hover:bg-blue-800 hover:text-white"
+            >
+              <i data-lucide="send"></i><span>Transfer</span>
+            </div>
+            <div
+              class="w-full h-[45px] flex p-2 gap-5 items-center rounded hover:bg-blue-800 hover:text-white"
+            >
+              <i data-lucide="history"></i><span>History</span>
+            </div>
+            <div
+              class="w-full h-[45px] flex p-2 gap-5 items-center rounded hover:bg-blue-800 hover:text-white"
+            >
+              <i data-lucide="archive-restore"></i><span>Top Up</span>
+            </div>
+            <div
+              class="w-full h-[45px] flex p-2 gap-5 items-center rounded hover:bg-blue-800 hover:text-white"
+            >
+              <i data-lucide="user-round-pen"></i>Profile
+            </div>
+            <div
+              class="w-full h-[45px] flex p-2 gap-5 items-center rounded hover:bg-blue-800 hover:text-white"
+            >
+              <i data-lucide="log-out"></i>Keluar
+            </div>
+          </div>
+        </div>
+        <div class="section w-[700px] flex-col min-h-screen">
+          <div class="min-w-screen gap-5">
+            <div class="w-[222px] rounded border-solid"></div>
+            <div></div>
+            <div></div>
+          </div>
+          <div></div>
+          <div></div>
+        </div>
+        <div></div>
+      </div>
+    </div>
+    <script>
+      lucide.createIcons();
+    </script>
+  </body>
+</html>

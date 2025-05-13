@@ -1,0 +1,62 @@
+[
+  {
+    "image": "https://i.pravatar.cc/150?img=1",
+    "name": "Ghaluh Ramadhan",
+    "phone": "081234567890",
+    "amount": "Rp150.000"
+  },
+  {
+    "image": "https://i.pravatar.cc/150?img=2",
+    "name": "Siti Aminah",
+    "phone": "082198765432",
+    "amount": "Rp75.000"
+  },
+  {
+    "image": "https://i.pravatar.cc/150?img=3",
+    "name": "Budi Santoso",
+    "phone": "085612345678",
+    "amount": "Rp1.250.000"
+  },
+  {
+    "image": "https://i.pravatar.cc/150?img=4",
+    "name": "Rina Oktaviani",
+    "phone": "087712341234",
+    "amount": "Rp300.000"
+  },
+  {
+    "image": "https://i.pravatar.cc/150?img=5",
+    "name": "Dimas Pratama",
+    "phone": "081234098765",
+    "amount": "Rp20.000"
+  },
+  {
+    "image": "https://i.pravatar.cc/150?img=6",
+    "name": "Indah Permatasari",
+    "phone": "083345678912",
+    "amount": "Rp500.000"
+  },
+  {
+    "image": "https://i.pravatar.cc/150?img=7",
+    "name": "Agus Wijaya",
+    "phone": "089876543210",
+    "amount": "Rp200.000"
+  },
+  {
+    "image": "https://i.pravatar.cc/150?img=8",
+    "name": "Lestari Dewi",
+    "phone": "088812345678",
+    "amount": "Rp90.000"
+  },
+  {
+    "image": "https://i.pravatar.cc/150?img=9",
+    "name": "Yusuf Maulana",
+    "phone": "081112223333",
+    "amount": "Rp1.000.000"
+  },
+  {
+    "image": "https://i.pravatar.cc/150?img=10",
+    "name": "Nina Karisma",
+    "phone": "086543210987",
+    "amount": "Rp35.000"
+  }
+]

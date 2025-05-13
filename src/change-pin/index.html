@@ -21,27 +21,32 @@
         </div>
         <div class="navbar">
           <p class="teks-14">Ghaluh Wizard</p>
-          <img class="profile"
+          <img
+            class="profile"
             src="/asset/images/dashboardv1/Ellipse 185.svg"
             alt="profile"
           />
           <ul class="menu">
-           <li class="dropdown">
-             <a href="#"> <img
-                src="/asset/images/dashboardv1/down.svg"
-                alt="dropdown icon"
-                class="dropdown"
-             /></a>
+            <li class="dropdown">
+              <a href="#">
+                <img
+                  src="/asset/images/dashboardv1/down.svg"
+                  alt="dropdown icon"
+                  class="toggle"
+              /></a>
               <ul class="dropdown-menu">
                 <li>
-                  <a href="#" class="teks-14">
-                    <img src="/asset/images/transfer/person.svg" alt="person">
+                  <a href="../edit-profile/index.html" class="teks-14">
+                    <img src="/asset/images/transfer/person.svg" alt="person" />
                     Profile
                   </a>
                 </li>
                 <li>
-                   <a href="#" class="logout">
-                    <img src="/asset/images/transfer-detail/Log Out.svg" alt="person">
+                  <a href="../login/index.html" class="logout">
+                    <img
+                      src="/asset/images/transfer-detail/Log Out.svg"
+                      alt="person"
+                    />
                     Keluar
                   </a>
                 </li>
@@ -52,34 +57,38 @@
       </nav>
     </header>
     <section class="section-container">
-     <div class="navigation">
+      <div class="navigation">
         <div class="content-navigation">
           <a href="../dashboardv1/index.html" class="item-navigation">
             <img
               src="/asset/images/history/dashboard-two.svg"
               alt="dashboard"
             />
-            <p class="teks-16">Dashboard</p>
+          Dashboard
           </a>
           <a href="../transfer/index.html" class="item-navigation">
             <img src="/asset/images/dashboardv1/Send 2.svg" alt="send" />
-            <p style="color: #4f5665" class="teks-16">Transfer</p>
+           Transfer
           </a>
-          <a href="../historyTransaction/index.html" class="item-navigation" >
+          <a href="../historyTransaction/index.html" class="item-navigation">
             <img src="/asset/images/transfer/history (2).svg" alt="history" />
-            <p style="color: #4f5665" class="teks-16">History</p>
+          History
           </a>
           <a href="../top-up/index.html" class="item-navigation">
             <img src="/asset/images/dashboardv1/Upload.svg" alt="Upload" />
-            <p style="color: #4f5665" class="teks-16">Top Up</p>
+           Top Up
           </a>
-          <a href="../edit-profile/index.html" class="item-navigation" style="background-color: #2948ff;">
+          <a
+            href="../edit-profile/index.html"
+            class="item-navigation"
+            style="background-color: #2948ff"
+          >
             <img src="/asset/images/edit-profile/pp.svg" alt="User" />
             <p style="color: white" class="teks-16">Profile</p>
           </a>
           <a href="../login/index.html" class="item-navigation">
             <img src="/asset/images/dashboardv1/Icon.svg" alt="logout" />
-            <p style="color: #4f5665" class="teks-16">Keluar</p>
+            <p style="color: red;" class="teks-16">Keluar</p>
           </a>
         </div>
       </div>
@@ -91,32 +100,41 @@
               <span style="color: #0b132a; font-weight: 600" class="teks-16"
                 >Profile</span
               >
-               <div class="transfer">
+              <div class="transfer">
                 <h1>Profile</h1>
               </div>
             </div>
             <div class="content-item-two">
               <div class="frame-35">
                 <p class="teks-30">Change Pin 👋</p>
-                <p class="teks-16">Please save your pin because this so important.</p>
-              <form class="pin-container">
-                 <div class="pin-inputs">
-                    <input type="text" maxlength="1" class="pin-box" autofocus />
+                <p class="teks-16">
+                  Please save your pin because this so important.
+                </p>
+                <form class="pin-container" id="inputPin">
+                  <div class="pin-inputs">
+                    <input
+                      type="text"
+                      maxlength="1"
+                      class="pin-box"
+                      autofocus
+                    />
                     <input type="text" maxlength="1" class="pin-box" />
                     <input type="text" maxlength="1" class="pin-box" />
                     <input type="text" maxlength="1" class="pin-box" />
                     <input type="text" maxlength="1" class="pin-box" />
                     <input type="text" maxlength="1" class="pin-box" />
-                </div>
-                <div class="container-button">
-                 <button type="submit">Submit</button>
-                </div>
-              </form>
+                  </div>
+                  <div class="container-button">
+                    <button type="submit">Submit</button>
+                    <p class="message error"></p>
+                  </div>
+                </form>
               </div>
             </div>
           </div>
         </div>
       </div>
     </section>
+    <script src="./script.js"></script>
   </body>
 </html>

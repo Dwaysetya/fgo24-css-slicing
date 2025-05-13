@@ -96,10 +96,21 @@ nav {
   gap: 8px;
   padding: 4px 2px 4px 8px;
   text-decoration: none;
+  transition: background-color 0.3s, color 0.3s;
 }
+.item-navigation img {
+  filter: none;
+  transition: filter 0.3s;
+  margin-right: 8px;
+}
+
 .item-navigation:hover {
   background-color: #2948ff;
   color: white;
+}
+
+.item-navigation:hover img {
+  filter: brightness(0) invert(1);
 }
 .content {
   margin-left: 20%;
@@ -186,7 +197,7 @@ input {
   font-size: 12px;
   border: none;
   outline: none;
-  color: #4F5665;
+  color: #4f5665;
 }
 .people > img {
   width: 80px;
@@ -246,7 +257,6 @@ label {
   list-style: none;
   padding: 0;
 }
-
 .menu > li {
   position: relative;
   margin-right: 1.5rem;
@@ -291,6 +301,10 @@ label {
   flex-direction: row;
   gap: 10px;
   text-decoration: none;
+  transition: background-color 0.3s, color 0.3s;
+}
+.dropdown-menu li a:hover {
+  background-color: #2948ff;
 }
 .dropdown-menu li .teks-14 {
   font-weight: 400;
@@ -299,7 +313,244 @@ label {
   color: #d00000;
   background-color: white;
 }
-
-.dropdown:hover .dropdown-menu {
+.dropdown.active .dropdown-menu {
   display: block;
+}
+.error {
+  color: red;
+}
+.success {
+  color: green;
+}
+@media screen and (max-width: 375px) {
+  nav {
+    display: none;
+  }
+  header {
+    margin: 0;
+  }
+  .section-container {
+    position: sticky;
+  }
+  .frame-content {
+    display: none;
+  }
+  .item-two {
+    width: 100%;
+    border: none;
+    margin-right: 20px;
+    gap: 10px;
+  }
+  .item-one {
+    width: 375px;
+  }
+  .item-one img,
+  .item-one span {
+    display: none;
+  }
+  .content-item {
+    margin-top: 12px;
+  }
+  .transfer {
+    display: flex;
+    width: 375px;
+    height: 54px;
+    background-color: #2948ff;
+    padding: 15px 24px;
+    align-items: center;
+    position: fixed;
+  }
+  .transfer h1 {
+    color: white;
+    font-size: 14px;
+    font-weight: 500;
+  }
+  .find-people .teks-16 {
+    font-size: 14px;
+    font-weight: 500;
+  }
+  .navigation {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 375px;
+    height: 74px;
+    border-right: none;
+    border-top: 1px solid #e8e8e8;
+    padding: 10px 20px;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    z-index: 1000;
+    box-shadow: 0px -2px 5px #00000014;
+  }
+  .content-navigation {
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    height: 60px;
+    width: 100%;
+    gap: 0;
+  }
+
+  .item-navigation {
+    width: 100%;
+    border-radius: 6px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 4px 0;
+    font-size: 10px;
+    height: 100%;
+    gap: 2px;
+    text-decoration: none;
+  }
+  .content-navigation .teks-16 {
+    font-size: 10px;
+  }
+  .icon-dashboard1 {
+    fill: #4f5665;
+    display: block;
+  }
+  .item-navigation:hover {
+    background-color: white;
+  }
+  .content {
+    margin: 0;
+    width: 100%;
+    height: 100vh;
+  }
+  .content1,
+  .content1-2 {
+    width: 100%;
+  }
+  .content1-2 {
+    position: relative;
+  }
+  .content1-3 {
+    width: 100%;
+    height: auto;
+  }
+  .icon-dashboard {
+    color: #2948ff;
+  }
+  .item-navigation p {
+    color: #2948ff;
+  }
+  .item1 .teks-16 {
+    font-size: 10px;
+  }
+  .teks-24 {
+    font-size: 12px;
+  }
+  .teks-16 {
+    font-size: 14px;
+  }
+  .two-find-11 {
+    width: 100%;
+    padding: 20px;
+  }
+  .two-find-1 {
+    width: 100%;
+    padding: 0;
+  }
+  .price {
+    width: 118px;
+  }
+  .two-find-2 {
+    width: 100%;
+    height: 50px;
+    flex-direction: column;
+    align-items: start;
+    padding: 0;
+    margin: 0;
+    margin-top: 5%;
+    gap: 0;
+  }
+  .two-find-21 {
+    display: none;
+  }
+  .phone {
+    flex-direction: column;
+    gap: 10px;
+    width: 217px;
+    height: 40px;
+    align-items: start;
+    justify-content: start;
+    display: flex;
+  }
+  .trash {
+    display: none;
+  }
+  .trash img {
+    width: 16px;
+    height: 16px;
+  }
+  .name {
+    justify-content: start;
+    width: 183px;
+    height: 105px;
+  }
+  .name p {
+    width: 133px;
+  }
+  .search-container {
+    width: 335px;
+  }
+  .find-people .teks-12 {
+    display: none;
+  }
+  .people img {
+    width: 80px;
+  }
+  .nominal,
+  .amount,
+  .notes,
+  .submit-transfer {
+    width: 335px;
+  }
+  .amount {
+    height: 60px;
+    margin: 0;
+  }
+  .nominal {
+    height: 41px;
+  }
+  .notes {
+    height: 170px;
+  }
+  .notes input {
+    width: 300px;
+  }
+  .amount .teks-14 {
+    font-size: 12px;
+    font-weight: 400;
+  }
+  .amount > .teks-16 {
+    font-size: 14px;
+    font-weight: 500;
+  }
+  .button-name1,
+  .button-name2 {
+    width: 183px;
+    height: 45px;
+  }
+  .people img {
+    width: 20px;
+    height: 20px;
+  }
+  .background img {
+    width: 128px;
+    height: 128px;
+  }
+  .form-action {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 10px;
+  }
+  .submit{
+    width: 100%;
+  }
 }

@@ -86,11 +86,18 @@ formPin.addEventListener("submit", function (e) {
     modal.classList.remove("active");
     modalSuccess.classList.add("active");
   }
-  //   message.textContent = "Input Pin Berhasil";
-  //   message.classList.add("success");
-
   this.reset();
 });
+
+const onClick = document.querySelector(".done-failed");
+
+onClick.addEventListener("click", function (a) {
+  a.preventDefault();
+  console.log("data", a);
+  modalFailed.classList.remove("active");
+});
+
+
 
 //show drpdown
 const hamburgerButton = document.querySelector(".toggle");

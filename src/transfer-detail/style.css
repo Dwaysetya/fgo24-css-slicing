@@ -92,10 +92,21 @@ nav {
   gap: 8px;
   padding: 4px 2px 4px 8px;
   text-decoration: none;
+  transition: background-color 0.3s, color 0.3s;
 }
+.item-navigation img {
+  filter: none;
+  transition: filter 0.3s;
+  margin-right: 8px;
+}
+
 .item-navigation:hover {
   background-color: #2948ff;
   color: white;
+}
+
+.item-navigation:hover img {
+  filter: brightness(0) invert(1);
 }
 .content {
   width: 80%;
@@ -310,7 +321,6 @@ input {
 
 .menu {
   list-style: none;
-  margin: 0;
   padding: 0;
 }
 
@@ -987,7 +997,7 @@ button:hover {
     width: 80%;
     margin-bottom: 60vh;
   }
-  .frame-12-success{
+  .frame-12-success {
     margin-bottom: 0;
   }
 }
@@ -1060,22 +1070,25 @@ button:hover {
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    gap: 8px;
-    width: 75px;
     height: 60px;
-  }
-  .content-navigation .teks-16 {
-    font-size: 10px;
+    width: 100%;
+    gap: 0;
   }
 
   .item-navigation {
-    padding: 4px 8px;
+    width: 100%;
     border-radius: 6px;
-    font-size: 14px;
+    display: flex;
     flex-direction: column;
-    gap: 0;
-    width: 75px;
-    height: 60px;
+    justify-content: space-between;
+    align-items: center;
+    padding: 4px 0;
+    font-size: 10px;
+    gap: 2px;
+    text-decoration: none;
+  }
+  .content-navigation .teks-16 {
+    font-size: 10px;
   }
   .icon-dashboard1 {
     fill: #4f5665;
@@ -1196,5 +1209,40 @@ button:hover {
   .amount > .teks-16 {
     font-size: 14px;
     font-weight: 500;
+  }
+  .modal .frame-35 {
+    height: 70%;
+  }
+  .pin-container {
+    height: 50%;
+  }
+  .frame-35 .teks-30 {
+    font-size: 25px;
+    margin: 0;
+  }
+  .frame-35-item-success > img,
+  .frame-35-item-failed > img {
+    height: 40%;
+  }
+  .frame-35-success,
+  .frame-35-failed {
+    height: 75%;
+  }
+  .frame-35-failed {
+    width: 80%;
+    margin-bottom: 60vh;
+  }
+  .frame-35-item-failed {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .teks-22-failed{
+    font-size: 20px;
+  }
+  .teks-14-failed{
+    font-size: 12px;
   }
 }
