@@ -6,6 +6,7 @@
 body {
   margin: 0;
   font-family: "Montserrat", sans-serif;
+   overflow: hidden;
 }
 nav {
   width: 100%;
@@ -69,7 +70,7 @@ nav {
 }
 .navigation {
   width: 20%;
-  height: 948px;
+  height: auto;
   background-color: white;
   border-right: 1px solid #e8e8e8;
   padding: 44px 50px;
@@ -97,7 +98,7 @@ nav {
 .item-navigation img {
   filter: none;
   transition: filter 0.3s;
-  margin-right: 8px; 
+  margin-right: 8px;
 }
 
 .item-navigation:hover {
@@ -106,7 +107,7 @@ nav {
 }
 
 .item-navigation:hover img {
-  filter: brightness(0) invert(1); 
+  filter: brightness(0) invert(1);
 }
 .content {
   width: 80%;
@@ -156,7 +157,8 @@ nav {
 }
 .item-two {
   width: 1061px;
-  height: auto;
+  height: 100%;
+  padding: 20px;
   border: 1px solid #e8e8e8;
   display: flex;
   flex-direction: column;
@@ -246,39 +248,6 @@ input {
   flex-direction: row;
   justify-content: space-between;
 }
-.people {
-  width: 112px;
-  height: 70px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.people img {
-  width: 48px;
-  height: 48px;
-  border-radius: 4px;
-}
-.name {
-  width: 435px;
-  height: 70px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.telp {
-  width: 243px;
-  height: 70px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.trash {
-  width: 77px;
-  height: 70px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
 
 .menu {
   list-style: none;
@@ -345,6 +314,103 @@ input {
 .transfer {
   display: none;
 }
+.peopleData {
+  width: 100%;
+}
+#peopleData {
+  width: 100%;
+}
+table {
+  width: 100%;
+}
+
+.people-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.people-table tr {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  cursor: pointer;
+  padding: 0 10%;
+  transition: background-color 0.2s;
+}
+
+.people-table tr:hover {
+  background-color: #e0e0e0;
+}
+
+.people-table td {
+  padding: 16px 12px;
+  vertical-align: middle;
+}
+
+.photo-cell {
+  width: 100px;
+}
+.info-cell {
+  text-align: left;
+}
+.icon-cell {
+  width: 40px;
+  text-align: center;
+}
+
+.people-img {
+  width: 50px;
+  height: 50px;
+  border-radius: 4px;
+  display: block;
+}
+
+.people-name {
+  margin: 0;
+  color: gray;
+  font-weight: 400;
+}
+
+.people-phone {
+  margin: 0;
+  color: gray;
+  font-size: 14px;
+}
+
+.icon-cell {
+  width: 40px;
+  text-align: center;
+}
+
+.star-icon {
+  width: 20px;
+}
+.pagination {
+  width: 100%;
+  display: flex;
+  justify-content: end;
+  text-align: center;
+  margin-top: 1rem;
+}
+
+.pagination button {
+  margin: 0 3px;
+  padding: 6px 12px;
+  cursor: pointer;
+  border: none;
+  box-shadow: 0px 2px 5px rgba(22, 0, 0, 0.611);
+}
+
+.pagination button.active {
+  background-color: black;
+  color: white;
+}
+
+.pagination button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
 @media screen and (max-width: 1149px) {
   nav {
     display: none;
@@ -364,7 +430,7 @@ input {
     margin-bottom: 30%;
     gap: 10px;
   }
-  .item-two a{
+  .item-two a {
     width: 80%;
   }
   .item-one {
@@ -481,7 +547,7 @@ input {
   .two-find-11 {
     justify-content: space-between;
   }
-  .two-find-1{
+  .two-find-1 {
     width: 100%;
   }
   .two-find-2 {
@@ -648,7 +714,7 @@ input {
   .teks-16 {
     font-size: 14px;
   }
-  #peopleData{
+  #peopleData {
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -760,7 +826,7 @@ input {
     z-index: 1000;
     box-shadow: 0px -2px 5px #00000014;
   }
- .content-navigation {
+  .content-navigation {
     flex-direction: row;
     justify-content: center;
     align-items: center;
@@ -768,7 +834,7 @@ input {
     width: 100%;
     gap: 0;
   }
-  
+
   .item-navigation {
     width: 100%;
     border-radius: 6px;
@@ -848,7 +914,6 @@ input {
   }
   .name,
   .telp {
-    /* width: 105px; */
     height: 10px;
   }
   .search-container {

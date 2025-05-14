@@ -18,11 +18,6 @@ form.addEventListener("submit", function (e) {
     message.classList.add("error");
   }
 
-  //   document.addEventListener("click", function () {
-  //     if (modal.contains(e.target)) {
-  //       modal.classList.remove("active");
-  //     }
-  //   });
 });
 
 // get search param

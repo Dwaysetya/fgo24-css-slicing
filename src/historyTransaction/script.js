@@ -10,57 +10,102 @@ fetch("data/transaksi.json")
     console.log("Data tidak ditemukan", error);
   });
 
-function renderPeople(data) {
+function renderPeople(data, dataSearch, currentPage = 1, itemsPerPage = 5) {
   const container = document.getElementById("transaksiHistori");
-
   container.innerHTML = "";
 
-  data.forEach((people, index) => {
-    const div = document.createElement("div");
+  const start = (currentPage - 1) * itemsPerPage;
+  const end = start + itemsPerPage;
+  const paginatedData = data.slice(start, end);
 
-    div.className = index % 2 === 0 ? "two-find-1" : "two-find-11";
-    div.style.color = index % 2 === 0 ? "red" : "green";
+  const table = document.createElement("table");
+  table.className = "transaksi-table";
 
-    div.innerHTML = `
-    <div class="people">
-                <img
-                  style="width: 48px; height: 48px"
-                  src="${people.image}"
-                  alt="people"
-                />
-              </div>
-              <div class="phone">
-                <div class="name">
-                  <p class="teks-16" >${people.name}</p>
-                </div>
-                <div class="telp">
-                  <p class="teks-16">${people.phone}</p>
-                </div>
-              </div>
-              <div class="price">
-                <p class="teks-14">${people.amount}</p>
-              </div>
-              <div class="trash">
-                <img src="/asset/images/history/Trash.svg" alt="trash" />
-              </div>
-      `;
+  const tbody = document.createElement("tbody");
 
-    container.appendChild(div);
+  paginatedData.forEach((people, index) => {
+    const row = document.createElement("tr");
+    row.className = index % 2 === 0 ? "two-find-1" : "two-find-11";
 
-    div.addEventListener("click", function (e) {
+    row.innerHTML = `
+      <td class="photo-cell">
+        <img src="${people.image}" alt="people" style="width: 48px; height: 48px;" />
+      </td>
+      <td class="info-cell">
+        <p class="teks-16">${people.name}</p>
+      </td>
+       <td class="info-cell">
+        <p class="teks-16">${people.phone}</p>
+      </td>
+      <td class="price-cell">
+        <p class="teks-14">${people.amount}</p>
+      </td>
+      <td class="trash-cell">
+        <img src="/asset/images/history/Trash.svg" alt="trash" />
+      </td>
+    `;
+
+    row.addEventListener("click", function (e) {
       e.preventDefault();
-
       const variabelData = `name=${people.name}&phone=${people.phone}&photo=${people.image}&amount=${people.amount}`;
-
       const searchParams = new URLSearchParams(variabelData);
       console.log("data", searchParams.toString());
       getParams(searchParams);
-      //   const url = `/src/historyTransaction/index.html?${searchParams.toString()}`;
-
-      //   window.location.href = url;
     });
+
+    tbody.appendChild(row);
   });
+
+  table.appendChild(tbody);
+  container.appendChild(table);
+
+  renderPagination(data, dataSearch, currentPage, itemsPerPage);
 }
+
+function renderPagination(data, keyword, pageSekarang, itemPerHalaman) {
+  const totalPage = Math.ceil(data.length / itemPerHalaman);
+  const paginationContainer = document.getElementById("pagination");
+
+  paginationContainer.innerHTML = "";
+
+  if (totalPage <= 1) return;
+
+  const btnPrev = document.createElement("button");
+  btnPrev.textContent = "Prev";
+  btnPrev.disabled = pageSekarang === 1;
+  btnPrev.onclick = () =>
+    renderPeople(data, keyword, pageSekarang - 1, itemPerHalaman);
+  paginationContainer.appendChild(btnPrev);
+
+  for (let i = 1; i <= totalPage; i++) {
+    const tombol = document.createElement("button");
+    tombol.textContent = i;
+    if (i === pageSekarang) tombol.classList.add("active");
+    tombol.onclick = () => renderPeople(data, keyword, i, itemPerHalaman);
+    paginationContainer.appendChild(tombol);
+  }
+
+  const nextBtn = document.createElement("button");
+  nextBtn.textContent = "Next";
+  nextBtn.disabled = pageSekarang === totalPage;
+  nextBtn.onclick = () =>
+    renderPeople(data, keyword, pageSekarang + 1, itemPerHalaman);
+  paginationContainer.appendChild(nextBtn);
+}
+//search
+const searchInput = document.querySelector('input[name="search"]');
+
+searchInput.addEventListener("input", function () {
+  const dataSearch = this.value.toLowerCase();
+
+  const filter = transaksiData.filter((person) => {
+    return (
+      person.name.toLowerCase().includes(dataSearch) ||
+      person.phone.toLowerCase().includes(dataSearch)
+    );
+  });
+  renderPeople(filter, dataSearch);
+});
 
 function getParams(param) {
   const imageModal = param.get("photo") || "";
@@ -103,20 +148,6 @@ function getParams(param) {
   containerAmount.appendChild(divAmount);
 }
 
-//search
-const searchInput = document.querySelector('input[name="search"]');
-
-searchInput.addEventListener("input", function () {
-  const dataSearch = this.value.toLowerCase();
-
-  const filter = transaksiData.filter((person) => {
-    return (
-      person.name.toLowerCase().includes(dataSearch) ||
-      person.phone.toLowerCase().includes(dataSearch)
-    );
-  });
-  renderPeople(filter, dataSearch);
-});
 const onClick = document.getElementById("transaksiHistori");
 const closeModal = document.querySelector(".background");
 const modal = document.querySelector(".modal");

@@ -84,7 +84,7 @@ nav {
 .item-navigation img {
   filter: none;
   transition: filter 0.3s;
-  margin-right: 8px; 
+  margin-right: 8px;
 }
 
 .item-navigation:hover {
@@ -93,7 +93,7 @@ nav {
 }
 
 .item-navigation:hover img {
-  filter: brightness(0) invert(1); 
+  filter: brightness(0) invert(1);
 }
 .content {
   width: 80%;
@@ -129,27 +129,20 @@ nav {
   align-items: center;
   gap: 5px;
 }
-.two-find-1 {
-  width: 926px;
-  height: 70px;
-  background-color: #e8e8e84d;
+.two-find-1,
+.two-find-11 {
   gap: 10px;
   display: flex;
   text-decoration: none;
   flex-direction: row;
-  justify-content: center;
+  justify-content:space-evenly;
   align-items: center;
 }
+.two-find-1 {
+  background-color: #e8e8e84d;
+}
 .two-find-11 {
-  width: 926px;
-  height: 70px;
   border-bottom: 1px solid #e8e8e84d;
-  gap: 10px;
-  display: flex;
-  text-decoration: none;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
 }
 .two-find-2 {
   width: 926px;
@@ -157,17 +150,6 @@ nav {
   gap: 10px;
   margin: 15px 0;
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-}
-.two-find-21 {
-  width: 926px;
-  height: 40px;
-  gap: 10px;
-  margin: 15px 0;
-  display: flex;
-  text-decoration: none;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
@@ -229,30 +211,13 @@ input {
   justify-content: center;
   align-items: center;
 }
-.pagination {
-  list-style: none;
-  display: flex;
-  gap: 8px;
-  padding: 0;
-}
-.pagination li a {
-  display: block;
-  padding: 5px 5px;
-  text-decoration: none;
-  color: #333;
-  border-radius: 4px;
-  font-weight: 500;
-  color: #0b132a;
-  font-size: 12px;
-  line-height: 18px;
-}
 .transfer {
   display: none;
 }
 .phone {
   display: flex;
 }
-#transaksiHistori{
+#transaksiHistori {
   cursor: pointer;
 }
 .pagination li a:hover {
@@ -431,6 +396,72 @@ button:hover {
 }
 .search-container input {
   width: 100%s;
+}
+table {
+  width: 100%;
+}
+#transaksiHistori {
+  width: 100%;
+}
+.people-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.people-table tr {
+  width: 100%;
+  cursor: pointer;
+  padding: 0 10%;
+  transition: background-color 0.2s;
+}
+.transaksi-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.transaksi-table td {
+  padding: 10px;
+  vertical-align: middle;
+}
+
+.photo-cell img {
+  border-radius: 4px;
+}
+
+.trash-cell img {
+  cursor: pointer;
+}
+.info-cell{
+  display: flex;
+  width: 20%;
+  align-self: center;
+  justify-self: center;
+}
+.pagination {
+  width: 100%;
+  display: flex;
+  padding: 30px;
+  justify-content: end;
+  text-align: center;
+  margin-top: 1rem;
+}
+
+.pagination button {
+  margin: 0 3px;
+  padding: 6px 12px;
+  cursor: pointer;
+  border: none;
+  box-shadow: 0px 2px 5px rgba(22, 0, 0, 0.611);
+}
+
+.pagination button.active {
+  background-color: black;
+  color: white;
+}
+
+.pagination button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
 }
 @media screen and (max-width: 1149px) {
   nav {
@@ -853,7 +884,7 @@ button:hover {
   .content {
     position: relative;
   }
-  #transaksiHistori{
+  #transaksiHistori {
     margin-bottom: 30%;
   }
 }

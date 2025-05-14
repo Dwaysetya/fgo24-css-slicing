@@ -10,7 +10,7 @@ fetch("data/people.json")
     console.log("Data tidak ditemukan", error);
   });
 
-function renderPeople(data, dataSearch) {
+function renderPeople(data, dataSearch, currentPage = 1, itemHalaman = 5) {
   const container = document.getElementById("peopleData");
   const result = document.getElementById("result");
 
@@ -19,45 +19,84 @@ function renderPeople(data, dataSearch) {
 
   const total = data.length;
   if (total > 0) {
-    result.textContent = `${total}  Result Found For ${dataSearch}`;
-  } else {
-    result.textContent = "";
+    result.textContent = `${total} Result Found For "${dataSearch}"`;
   }
 
-  data.forEach((people, index) => {
-    const div = document.createElement("div");
+  const start = (currentPage - 1) * itemHalaman;
+  const end = start + itemHalaman;
+  const paginatedData = data.slice(start, end);
 
-    div.className = index % 2 === 0 ? "two-find-1" : "two-find-11";
+  const table = document.createElement("table");
+  table.className = "people-table";
 
-    div.innerHTML = `
-    <div class="people">
-          <img src="${people.photo}" alt="people" />
-        </div>
-        <div class="phone">
-          <div class="name">
-            <p class="teks-16">${people.name}</p>
-          </div>
-          <div class="telp">
-            <p class="teks-16">${people.phone}</p>
-          </div>
-        </div>
-        <div class="trash">
-          <img src="/asset/images/transfer/Star.svg" alt="trash" />
-        </div>
-      `;
+  const tbody = document.createElement("tbody");
 
-    container.appendChild(div);
+  paginatedData.forEach((people, index) => {
+    const row = document.createElement("tr");
+    row.className = index % 2 === 0 ? "two-find-1" : "two-find";
 
-    div.addEventListener("click", function (e) {
-      e.preventDefault();
+    row.innerHTML = `
+      <td class="photo-cell">
+        <img src="${people.photo}" alt="people" class="people-img" />
+      </td>
+      <td class="info-cell">
+        <p class="people-name">${people.name}</p>
+      </td>
+       <td class="info-cell">
+        <p class="people-phone">${people.phone}</p>
+      </td>
+      <td class="icon-cell">
+        <img src="/asset/images/transfer/Star.svg" alt="star" class="star-icon" />
+      </td>
+    `;
 
+    row.addEventListener("click", function () {
       const variabelData = `name=${people.name}&phone=${people.phone}&photo=${people.photo}`;
       const searchParams = new URLSearchParams(variabelData);
-      console.log("data", searchParams.toString());
       const url = `/src/transfer-detail/index.html?${searchParams.toString()}`;
       window.location.href = url;
     });
+
+    tbody.appendChild(row);
   });
+
+  table.appendChild(tbody);
+  container.appendChild(table);
+
+  renderPagination(data, dataSearch, currentPage, itemHalaman);
+}
+
+//pagination
+
+function renderPagination(data, keyword, pageSekarang, itemPerHalaman) {
+  const totalPage = Math.ceil(data.length / itemPerHalaman);
+  const paginationContainer = document.getElementById("pagination");
+
+  paginationContainer.innerHTML = "";
+
+  if (totalPage <= 1) return;
+
+  const btnPrev = document.createElement("button");
+  btnPrev.textContent = "Prev";
+  btnPrev.disabled = pageSekarang === 1;
+  btnPrev.onclick = () =>
+    renderPeople(data, keyword, pageSekarang - 1, itemPerHalaman);
+  paginationContainer.appendChild(btnPrev);
+
+  for (let i = 1; i <= totalPage; i++) {
+    const tombol = document.createElement("button");
+    tombol.textContent = i;
+    if (i === pageSekarang) tombol.classList.add("active");
+    tombol.onclick = () => renderPeople(data, keyword, i, itemPerHalaman);
+    paginationContainer.appendChild(tombol);
+  }
+
+  const nextBtn = document.createElement("button");
+  nextBtn.textContent = "Next";
+  nextBtn.disabled = pageSekarang === totalPage;
+  nextBtn.onclick = () =>
+    renderPeople(data, keyword, pageSekarang + 1, itemPerHalaman);
+  paginationContainer.appendChild(nextBtn);
 }
 
 //search
