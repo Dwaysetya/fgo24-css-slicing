@@ -29,7 +29,9 @@ form.addEventListener("submit", function (e) {
     password: password,
   };
 
-  localStorage.setItem("user", JSON.stringify(dataUser));
+  const jsonString = JSON.stringify(dataUser);
+  const base64String = btoa(jsonString);
+  localStorage.setItem("user", base64String);
   this.reset();
 });
 

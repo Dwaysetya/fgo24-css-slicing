@@ -13,81 +13,86 @@
     <title>Login</title>
   </head>
   <body>
-    <section>
-      <div class="content-one">
-        <div class="frame">
-          <div class="frame-12">
-            <img src="/asset/images/Money Wallet.png" alt="money wallet" />
-            <p>E-Wallet</p>
-          </div>
-          <p class="teks-30">Hello Welcome Back 👋</p>
-          <p class="teks-16">
-            Fill out the form correctly or you can login with several option.
-          </p>
-          <div class="media">
-            <div class="frame-32">
-              <button class="frame-29">
-                <img src="/asset/images/google.png" alt="google" />
-                <p class="teks-18">Sign In With Google</p>
-              </button>
+    <main>
+      <section>
+        <div class="content-one">
+          <div class="frame">
+            <div class="frame-12">
+              <img src="/asset/images/Money Wallet.png" alt="money wallet" />
+              <p>E-Wallet</p>
             </div>
-            <div class="frame-32">
-              <button class="frame-29">
-                <img src="/asset/images/facebook.png" alt="google" />
-                <p class="teks-18">Sign In With Facebook</p>
-              </button>
-            </div>
-          </div>
-          <img
-            style="margin-top: 20px"
-            src="/asset/images/Or web.png"
-            alt="Or"
-          />
-          <div class="kejadian" id="login">
-            <form id="login">
-              <label class="teks-16-kejadian">Email</label>
-              <div class="frame-1">
-                <img src="/asset/images/mail.png" alt="mail" />
-                <input
-                  id="email"
-                  type="email"
-                  placeholder="Enter Your Email"
-                  name="email"
-                />
-              </div>
-              <label class="teks-16-kejadian">Password</label>
-              <div class="frame-1">
-                <img src="/asset/images/Password.png" alt="password" />
-                <input
-                  id="password"
-                  type="password"
-                  placeholder="Enter Your Password"
-                  name="password"
-                />
-                <img
-                  class="eyeslash"
-                  id="eyeLogin"
-                  src="/asset/images/register/closeEye.svg"
-                  alt="eyeslash"
-                />
-              </div>
-              <p id="error" class="message error"></p>
-              <button class="link" id="submit">Login</button>
-            </form>
-
-            <p class="teks-16" style="text-align: center">
-              Not Have An Account?
-              <a href="/src/register/index.html" style="text-decoration: none"
-                >Register</a
-              >
+            <p class="teks-30">Hello Welcome Back 👋</p>
+            <p class="teks-16">
+              Fill out the form correctly or you can login with several option.
             </p>
+            <section class="media">
+              <div class="frame-32">
+                <button class="frame-29">
+                  <img src="/asset/images/google.png" alt="google" />
+                  <span class="teks-18">Sign In With Google</span>
+                </button>
+              </div>
+              <div class="frame-32">
+                <button class="frame-29">
+                  <img src="/asset/images/facebook.png" alt="Facebook logo" />
+                  <span class="teks-18">Sign In With Facebook</span>
+                </button>
+              </div>
+            </section>
+            <img
+              style="margin-top: 20px"
+              src="/asset/images/Or web.png"
+              alt="Or"
+            />
+            <section class="kejadian" id="login">
+              <form id="login">
+                <div>
+                  <label class="teks-16-kejadian">Email</label>
+                  <div class="frame-1">
+                    <img src="/asset/images/mail.png" alt="mail" />
+                    <input
+                      id="email"
+                      type="email"
+                      placeholder="Enter Your Email"
+                      name="email"
+                    />
+                  </div>
+                </div>
+                <div>
+                  <label class="teks-16-kejadian">Password</label>
+                  <div class="frame-1">
+                    <img src="/asset/images/Password.png" alt="password" />
+                    <input
+                      id="password"
+                      type="password"
+                      placeholder="Enter Your Password"
+                      name="password"
+                    />
+                    <img
+                      class="eyeslash"
+                      id="eyeLogin"
+                      src="/asset/images/register/closeEye.svg"
+                      alt="eyeslash"
+                    />
+                  </div>
+                </div>
+                <p id="error" class="message error"></p>
+                <button class="link" id="submit">Login</button>
+              </form>
+              <p class="teks-16" style="text-align: center">
+                Not Have An Account?
+                <a href="/src/register/index.html" style="text-decoration: none"
+                  >Register</a
+                >
+              </p>
+            </section>
           </div>
         </div>
-      </div>
-      <div class="content-two">
-        <img src="/asset/images/handtwo.png" alt="hand" />
-      </div>
-    </section>
+        <aside class="content-two">
+          <img src="/asset/images/handtwo.png" alt="hand" />
+        </aside>
+      </section>
+    </main>
     <script src="../login/script.js"></script>
   </body>
 </html>

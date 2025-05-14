@@ -5,7 +5,10 @@ document.getElementById("login").addEventListener("submit", function (e) {
   const password = document.getElementById("password").value;
   const message = document.querySelector(".message");
 
-  const getData = JSON.parse(localStorage.getItem("user"));
+const base64String = localStorage.getItem("user");
+const jsonString = atob(base64String);
+const getData = JSON.parse(jsonString);
+console.log("data", getData);
 
   message.textContent = "";
   message.classList.remove("success", "error");
