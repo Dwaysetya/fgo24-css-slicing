@@ -6,7 +6,7 @@ This repository contains projects on how to create websites, with a focus on doc
 
 ## Result
 
-![Result](/asset/images/regist.png)
+![Result](/asset/images/Screenshot%202025-06-20%20at%2015.31.57.png)
 
 ## How to Run this project
 
